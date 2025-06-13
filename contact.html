@@ -192,14 +192,14 @@
         <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <div>
-                    <h3 class="text-lg font-semibold mb-4">IAI-Promo</h3>
+                    <h3 class="text-lg font-semibold mb-4"><a href="index.html">IAI-Promo</a></h3>
                     <p class="text-gray-400">Présentation des différentes promotions d'IAI</p>
                 </div>
                 <div>
                     <h3 class="text-lg font-semibold mb-4">Liens rapides</h3>
                     <ul class="space-y-2">
                         <li><a href="index.html" class="text-gray-400 hover:text-white">Accueil</a></li>
-                        <li><a href="about.html" class="text-gray-400 hover:text-white">À propos</a></li>
+                        <li><a href="index.html#a-propos" class="text-gray-400 hover:text-white">À propos</a></li>
                         <li><a href="parcours.html" class="text-gray-400 hover:text-white">Parcours</a></li>
                     </ul>
                 </div>
@@ -213,23 +213,11 @@
                 </div>
                 <div>
                     <h3 class="text-lg font-semibold mb-4">Contact</h3>
-                    <p class="text-gray-400">Email: contact@iai-promo.com</p>
+                    <p class="text-gray-400">Email: <a href="mailto:contact@iai-promo.com">contact@iai-promo.com</a></p>
                 </div>
             </div>
         </div>
     </footer>
 
-    <script>
-        // Menu mobile toggle
-        const mobileMenuButton = document.querySelector('.mobile-menu-button');
-        const mobileMenu = document.querySelector('#mobile-menu');
-        const menuIcons = mobileMenuButton.querySelectorAll('svg');
-
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-            menuIcons[0].classList.toggle('hidden');
-            menuIcons[1].classList.toggle('hidden');
-        });
-    </script>
 </body>
 </html> 
