@@ -33,18 +33,34 @@
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
         <h1 class="section-title text-4xl font-bold mb-8">Contactez-nous</h1>
 
+            <section class="container py-5">
+                <!-- Start Map -->
+                <div id="mapid" style="width: 100%; height: 300px;">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3350.754274330931!2d9.477819874072505!3d0.3695698639442295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x107f3e9fdb555025%3A0x3e53b7c20a8baf8e!2sInstitut%20Africain%20D&#39;informatique!5e1!3m2!1sfr!2sga!4v1744501599858!5m2!1sfr!2sga"
+                        width="100%"
+                        height="100%"
+                        style="border: 0"
+                        allowfullscreen=""
+                        loading="lazy"
+                        >
+                    </iframe>
+                </div>
+                    
+            </section>
+
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
             <!-- Contact Form -->
             <div class="bg-white rounded-lg shadow-lg p-8">
                 <h2 class="text-2xl font-bold text-gray-900 mb-6">Envoyez-nous un message</h2>
-                <form class="space-y-6">
+                <form class="space-y-6" action="https://formspree.io/f/xdkejegr" method="post" role="form">
                     <div>
-                        <label for="name" class="block text-sm font-medium text-gray-700">Nom complet</label>
-                        <input type="text" id="name" name="name" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                        <label for="name" class="block text-sm font-medium text-gray-700">Nom complet <i>(obligatoire)</i></label>
+                        <input type="text" id="name" name="name" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500" required>
                     </div>
                     <div>
-                        <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
-                        <input type="email" id="email" name="email" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                        <label for="email" class="block text-sm font-medium text-gray-700">Email <i>(obligatoire)</i></label>
+                        <input type="email" id="email" name="email" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500" required>
                     </div>
                     <div>
                         <label for="subject" class="block text-sm font-medium text-gray-700">Sujet</label>
@@ -93,7 +109,7 @@
                             </div>
                             <div class="ml-3">
                                 <h3 class="text-lg font-medium text-gray-900">Email</h3>
-                                <p class="mt-1 text-gray-600">contact@iai-promo.com</p>
+                                <p class="mt-1 text-gray-600"><a href="mailto:contact@iai-promo.com">contact@iai-promo.com</a></p>
                             </div>
                         </div>
                         <div class="flex items-start">
@@ -124,7 +140,7 @@
                                 </span>
                             </summary>
                             <p class="mt-4 text-gray-600">
-                                Les candidatures se font via le concours d'entrée organisé chaque année. Consultez notre site web pour les dates et modalités.
+                                Les candidatures se font via le concours d'entrée organisé chaque année. Consultez notre <a href="https://www.iai-siege.com/" target="_blank" style="color: green;">site web</a> pour les dates et modalités.
                             </p>
                         </details>
                         <details class="group">
@@ -137,7 +153,7 @@
                                 </span>
                             </summary>
                             <p class="mt-4 text-gray-600">
-                                Les prérequis varient selon le programme choisi. Consultez la section "Parcours" pour plus de détails.
+                                Les prérequis varient selon le programme choisi. Consultez la section <a href="parcours.html" style="color: green;">"Parcours"</a> pour plus de détails.
                             </p>
                         </details>
                     </div>
@@ -151,14 +167,14 @@
         <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <div>
-                    <h3 class="text-lg font-semibold mb-4">IAI-Promo</h3>
+                    <h3 class="text-lg font-semibold mb-4"><a href="index.html">IAI-Promo</a></h3>
                     <p class="text-gray-400">Présentation des différentes promotions d'IAI</p>
                 </div>
                 <div>
                     <h3 class="text-lg font-semibold mb-4">Liens rapides</h3>
                     <ul class="space-y-2">
                         <li><a href="index.html" class="text-gray-400 hover:text-white">Accueil</a></li>
-                        <li><a href="about.html" class="text-gray-400 hover:text-white">À propos</a></li>
+                        <li><a href="index.html#a-propos" class="text-gray-400 hover:text-white">À propos</a></li>
                         <li><a href="parcours.html" class="text-gray-400 hover:text-white">Parcours</a></li>
                     </ul>
                 </div>
@@ -172,7 +188,20 @@
                 </div>
                 <div>
                     <h3 class="text-lg font-semibold mb-4">Contact</h3>
-                    <p class="text-gray-400">Email: contact@iai-promo.com</p>
+                    <p class="text-gray-400">Email: <a href="mailto:contact@iai-promo.com">contact@iai-promo.com</a></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+            <div class="container">
+                <div class="row pt-2">
+                    <div class="col-12">
+                        <p class="text-left text-light">
+                            Copyright &copy; 2025 IAI-PROMO
+                            | Designed by <a rel="sponsored" target="_blank">J; IRJ; K</a>
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
