@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IAI-Promo - Statistiques</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center flex-shrink-0">
+                    <img src="assets/logos/logo-iai.png" alt="Logo IAI" class="h-10 w-auto mr-2">
+                    <a href="index.html" class="text-2xl font-bold text-blue-600">IAI Promotions</a>
+                </div>
+                <!-- Desktop menu -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="index.html" class="text-gray-900 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Accueil</a>
+                        <a href="about.html" class="text-gray-900 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">À propos</a>
+                        <a href="parcours.html" class="text-gray-900 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Parcours</a>
+                        <a href="statistiques.html" class="text-gray-900 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Statistiques</a>
+                        <a href="contact.html" class="text-gray-900 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+                    </div>
+                </div>
+                <!-- Mobile menu toggle (checkbox hack) -->
+                <div class="md:hidden flex items-center">
+                    <input type="checkbox" id="menu-toggle" class="hidden">
+                    <label for="menu-toggle" class="menu-icon cursor-pointer">
+                        <svg class="h-8 w-8 text-gray-900 hover:text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="md:hidden px-2 pt-2 pb-3 space-y-1 bg-white shadow-lg">
+            <a href="index.html" class="block text-gray-900 hover:text-blue-600 px-3 py-2 rounded-md text-base font-medium">Accueil</a>
+            <a href="index.html#a-propos" class="block text-gray-900 hover:text-blue-600 px-3 py-2 rounded-md text-base font-medium">À propos</a>
+            <a href="parcours.html" class="block text-gray-900 hover:text-blue-600 px-3 py-2 rounded-md text-base font-medium">Parcours</a>
+            <a href="statistiques.html" class="block text-gray-900 hover:text-blue-600 px-3 py-2 rounded-md text-base font-medium">Statistiques</a>
+            <a href="contact.html" class="block text-gray-900 hover:text-blue-600 px-3 py-2 rounded-md text-base font-medium">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+        <h1 class="text-4xl font-bold text-gray-900 mb-12">La promo en chiffres</h1>
+
+        <!-- Overview Stats -->
+        <section class="mb-16">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                    <h3 class="text-2xl font-bold text-blue-600 mb-2">1000+</h3>
+                    <p class="text-gray-600">Étudiants formés</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                    <h3 class="text-2xl font-bold text-blue-600 mb-2">95%</h3>
+                    <p class="text-gray-600">Taux de réussite</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                    <h3 class="text-2xl font-bold text-blue-600 mb-2">85%</h3>
+                    <p class="text-gray-600">Taux d'insertion</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                    <h3 class="text-2xl font-bold text-blue-600 mb-2">3</h3>
+                    <p class="text-gray-600">Programmes</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Program Distribution -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8">Répartition par programme</h2>
+            <div class="bg-white rounded-lg shadow-lg p-8">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="text-center">
+                        <div class="w-32 h-32 mx-auto mb-4 rounded-full bg-blue-100 flex items-center justify-center">
+                            <span class="text-3xl font-bold text-blue-600">40%</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">AP/LP</h3>
+                        <p class="text-gray-600">400 étudiants</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-32 h-32 mx-auto mb-4 rounded-full bg-green-100 flex items-center justify-center">
+                            <span class="text-3xl font-bold text-green-600">35%</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">MIAGE</h3>
+                        <p class="text-gray-600">350 étudiants</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-32 h-32 mx-auto mb-4 rounded-full bg-purple-100 flex items-center justify-center">
+                            <span class="text-3xl font-bold text-purple-600">25%</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">ING</h3>
+                        <p class="text-gray-600">250 étudiants</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Yearly Progress -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8">Évolution des promotions</h2>
+            <div class="bg-white rounded-lg shadow-lg p-8">
+                <div class="space-y-8">
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">2023-2024</h3>
+                        <div class="w-full bg-gray-200 rounded-full h-4">
+                            <div class="bg-blue-600 h-4 rounded-full" style="width: 100%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">2022-2023</h3>
+                        <div class="w-full bg-gray-200 rounded-full h-4">
+                            <div class="bg-blue-600 h-4 rounded-full" style="width: 95%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">2021-2022</h3>
+                        <div class="w-full bg-gray-200 rounded-full h-4">
+                            <div class="bg-blue-600 h-4 rounded-full" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">2020-2021</h3>
+                        <div class="w-full bg-gray-200 rounded-full h-4">
+                            <div class="bg-blue-600 h-4 rounded-full" style="width: 85%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Success Stories -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8">Témoignages</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <div class="flex items-center mb-4">
+                        <img src="images/placeholder.jpg" alt="Student" class="w-16 h-16 rounded-full mr-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900">Jean Dupont</h3>
+                            <p class="text-gray-600">MIAGE 2022</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700">
+                        "La formation MIAGE m'a permis d'acquérir des compétences essentielles en gestion de projet et en systèmes d'information."
+                    </p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <div class="flex items-center mb-4">
+                        <img src="images/placeholder.jpg" alt="Student" class="w-16 h-16 rounded-full mr-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900">Marie Martin</h3>
+                            <p class="text-gray-600">ING 2023</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700">
+                        "Le programme ING m'a donné les outils nécessaires pour devenir un leader dans le domaine de l'informatique."
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white mt-12">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">IAI-Promo</h3>
+                    <p class="text-gray-400">Présentation des différentes promotions d'IAI</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Liens rapides</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white">Accueil</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white">À propos</a></li>
+                        <li><a href="parcours.html" class="text-gray-400 hover:text-white">Parcours</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Parcours</h3>
+                    <ul class="space-y-2">
+                        <li><a href="parcours.html#ap-lp" class="text-gray-400 hover:text-white">AP/LP</a></li>
+                        <li><a href="parcours.html#miage" class="text-gray-400 hover:text-white">MIAGE</a></li>
+                        <li><a href="parcours.html#ing" class="text-gray-400 hover:text-white">ING</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact</h3>
+                    <p class="text-gray-400">Email: contact@iai-promo.com</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html> 

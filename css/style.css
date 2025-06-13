@@ -1,0 +1,154 @@
+/* Custom animations and styles */
+
+/* Student card hover effects */
+.student-card {
+    transition: transform 0.3s ease-in-out;
+}
+
+.student-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Carousel animation */
+.carousel-container {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.carousel-track {
+    display: flex;
+    animation: carousel 30s linear infinite;
+    width: max-content;
+}
+
+@keyframes carousel {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Student info modal */
+.student-info {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.student-info:target {
+    display: block;
+}
+
+/* Overlay for modal */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.student-info:target + .overlay {
+    display: block;
+}
+
+/* Mobile menu */
+.mobile-menu {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .mobile-menu {
+        display: block;
+    }
+    
+    .desktop-menu {
+        display: none;
+    }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Image hover effects */
+.hover-zoom {
+    transition: transform 0.3s ease;
+}
+
+.hover-zoom:hover {
+    transform: scale(1.05);
+}
+
+/* Custom focus styles */
+.focus-ring {
+    outline: none;
+    transition: box-shadow 0.2s ease;
+}
+
+.focus-ring:focus {
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5);
+}
+
+/* Menu mobile styles */
+#mobile-menu {
+    display: none;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+#menu-toggle:checked ~ #mobile-menu {
+    display: block;
+    transform: translateY(0);
+}
+
+/* Animation pour l'icône du menu */
+.menu-icon {
+    transition: transform 0.3s ease;
+}
+
+#menu-toggle:checked ~ .menu-icon {
+    transform: rotate(90deg);
+}
+
+/* Styles de base */
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Ajustement pour le menu fixe */
+main {
+    padding-top: 4rem;
+}
