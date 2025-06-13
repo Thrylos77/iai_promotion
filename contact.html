@@ -3,57 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IAI-Promo - Contact</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="css/style.css">
+    <title>IAI Promotions - Contact</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 </head>
 <body class="bg-gray-50">
     <!-- Navigation -->
-    <nav class="bg-white shadow-lg fixed w-full z-50">
+    <nav class="bg-yellow-200 shadow-lg fixed w-full z-50" style="background-color: #FFE566 !important;">
         <div class="max-w-7xl mx-auto px-4">
-            <div class="flex justify-between items-center h-16">
-                <div class="flex items-center flex-shrink-0">
-                    <img src="assets/logos/logo-iai.png" alt="Logo IAI" class="h-10 w-auto mr-2">
+            <div class="flex flex-col md:flex-row justify-between items-center py-4 md:py-0 md:h-16">
+                <div class="flex items-center flex-shrink-0 mb-4 md:mb-0">
+                    <img src="assets/logos/logo-iai.png" alt="Logo IAI" class="h-10 w-10 rounded-full object-cover mr-2">
                     <a href="index.html" class="text-2xl font-bold text-[#006B3F]">IAI Promotions</a>
                 </div>
-                <!-- Desktop menu -->
-                <div class="hidden md:block">
-                    <div class="ml-10 flex items-baseline space-x-4">
-                        <a href="index.html" class="nav-link px-3 py-2 rounded-md text-sm font-medium">Accueil</a>
-                        <a href="index.html#a-propos" class="nav-link px-3 py-2 rounded-md text-sm font-medium">À propos</a>
-                        <a href="parcours.html" class="nav-link px-3 py-2 rounded-md text-sm font-medium">Parcours</a>
-                        <a href="statistiques.html" class="nav-link px-3 py-2 rounded-md text-sm font-medium">Statistiques</a>
-                        <a href="contact.html" class="nav-link active px-3 py-2 rounded-md text-sm font-medium">Contact</a>
-                    </div>
+                <div class="flex flex-wrap justify-center gap-2 md:gap-4">
+                    <a href="index.html" class="nav-link px-3 py-2 rounded-md text-sm font-medium">Accueil</a>
+                    <a href="index.html#a-propos" class="nav-link px-3 py-2 rounded-md text-sm font-medium">À propos</a>
+                    <a href="parcours.html" class="nav-link px-3 py-2 rounded-md text-sm font-medium">Parcours</a>
+                    <a href="statistiques.html" class="nav-link px-3 py-2 rounded-md text-sm font-medium">Statistiques</a>
+                    <a href="contact.html" class="nav-link active px-3 py-2 rounded-md text-sm font-medium">Contact</a>
                 </div>
-                <!-- Mobile menu button -->
-                <div class="md:hidden">
-                    <button type="button" class="mobile-menu-button inline-flex items-center justify-center p-2 rounded-md text-[#006B3F] hover:text-[#FFD100] focus:outline-none" aria-controls="mobile-menu" aria-expanded="false">
-                        <span class="sr-only">Ouvrir le menu</span>
-                        <!-- Icon when menu is closed -->
-                        <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                        </svg>
-                        <!-- Icon when menu is open -->
-                        <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                        </svg>
-                    </button>
-                </div>
-            </div>
-        </div>
-        <!-- Mobile menu -->
-        <div class="hidden md:hidden" id="mobile-menu">
-            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="index.html" class="nav-link block px-3 py-2 rounded-md text-base font-medium">Accueil</a>
-                <a href="index.html#a-propos" class="nav-link block px-3 py-2 rounded-md text-base font-medium">À propos</a>
-                <a href="parcours.html" class="nav-link block px-3 py-2 rounded-md text-base font-medium">Parcours</a>
-                <a href="statistiques.html" class="nav-link block px-3 py-2 rounded-md text-base font-medium">Statistiques</a>
-                <a href="contact.html" class="nav-link active block px-3 py-2 rounded-md text-base font-medium">Contact</a>
             </div>
         </div>
     </nav>
 
+    <br/>
     <!-- Main Content -->
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
         <h1 class="section-title text-4xl font-bold mb-8">Contactez-nous</h1>
@@ -129,7 +104,7 @@
                             </div>
                             <div class="ml-3">
                                 <h3 class="text-lg font-medium text-gray-900">Téléphone</h3>
-                                <p class="mt-1 text-gray-600">+241 XX XX XX XX</p>
+                                <p class="mt-1 text-gray-600">+241 65 59 14 76</p>
                             </div>
                         </div>
                     </div>
@@ -202,18 +177,5 @@
             </div>
         </div>
     </footer>
-
-    <script>
-        // Menu mobile toggle
-        const mobileMenuButton = document.querySelector('.mobile-menu-button');
-        const mobileMenu = document.querySelector('#mobile-menu');
-        const menuIcons = mobileMenuButton.querySelectorAll('svg');
-
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-            menuIcons[0].classList.toggle('hidden');
-            menuIcons[1].classList.toggle('hidden');
-        });
-    </script>
 </body>
 </html> 

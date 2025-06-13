@@ -16,19 +16,23 @@
     width: 100%;
 }
 
-.carousel-track {
+.animate-scroll {
     display: flex;
-    animation: carousel 30s linear infinite;
+    animation: scroll 30s linear infinite;
     width: max-content;
 }
 
-@keyframes carousel {
+@keyframes scroll {
     0% {
         transform: translateX(0);
     }
     100% {
         transform: translateX(-50%);
     }
+}
+
+.animate-scroll:hover {
+    animation-play-state: paused;
 }
 
 /* Student info modal */
@@ -126,16 +130,39 @@ html {
 :root {
     --iai-green: #006B3F;
     --iai-yellow: #FFD100;
+    --iai-light-yellow: #FFE566;
     --iai-white: #FFFFFF;
-    --iai-dark: #1F2937;
-    --iai-light-gray: #F3F4F6;
+    --iai-cream: #FFF8E1;
+    --iai-sand: #F5E6D3;
+    --iai-terracotta: #E67E22;
+}
+
+/* Animation pour le défilement des logos partenaires */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-50% - 1rem));
+    }
+}
+
+.animate-scroll {
+    animation: scroll 25s linear infinite;
+    display: flex;
+    width: max-content;
+}
+
+.animate-scroll:hover {
+    animation-play-state: paused;
 }
 
 /* Styles de base */
 body {
     font-family: 'Inter', sans-serif;
-    background-color: var(--iai-light-gray);
-    color: var(--iai-dark);
+    background-color: var(--iai-cream);
+    color: #333;
+    line-height: 1.6;
 }
 
 /* Ajustement pour le menu fixe */
@@ -145,17 +172,16 @@ main {
 
 /* Styles de navigation */
 .nav-link {
-    color: var(--iai-dark);
+    color: var(--iai-green);
     transition: color 0.3s ease;
-    font-weight: 500;
 }
 
 .nav-link:hover {
-    color: var(--iai-green);
+    color: var(--iai-terracotta);
 }
 
 .nav-link.active {
-    color: var(--iai-green);
+    color: var(--iai-terracotta);
     font-weight: 600;
 }
 
@@ -163,15 +189,13 @@ main {
 .btn-primary {
     background-color: var(--iai-green);
     color: var(--iai-white);
-    transition: all 0.3s ease;
     padding: 0.75rem 1.5rem;
     border-radius: 0.375rem;
-    font-weight: 500;
+    transition: background-color 0.3s ease;
 }
 
 .btn-primary:hover {
-    background-color: #005A35;
-    transform: translateY(-1px);
+    background-color: var(--iai-terracotta);
 }
 
 .btn-secondary {
@@ -192,14 +216,13 @@ main {
 .card {
     background-color: var(--iai-white);
     border-radius: 0.5rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 .card-header {
@@ -219,14 +242,26 @@ main {
 /* Styles des sections */
 .section {
     padding: 4rem 0;
+    background-color: var(--iai-cream);
 }
 
 .section-title {
     color: var(--iai-green);
-    font-size: 2rem;
-    font-weight: 700;
-    margin-bottom: 2rem;
     text-align: center;
+    margin-bottom: 2rem;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background-color: var(--iai-yellow);
 }
 
 .section-subtitle {
@@ -241,7 +276,7 @@ main {
 footer {
     background-color: var(--iai-green);
     color: var(--iai-white);
-    padding: 3rem 0;
+    padding: 2rem 0;
 }
 
 footer a {
@@ -250,7 +285,7 @@ footer a {
 }
 
 footer a:hover {
-    color: var(--iai-white);
+    color: var(--iai-light-yellow);
 }
 
 /* Styles des badges */
@@ -368,4 +403,41 @@ footer a:hover {
     .partner-logo {
         max-width: 150px;
     }
+}
+
+/* Mobile menu styles */
+.mobile-menu-button {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .mobile-menu-button {
+        display: block;
+    }
+
+    .mobile-menu {
+        display: none;
+    }
+
+    .mobile-menu-button:focus + .mobile-menu,
+    .mobile-menu:hover {
+        display: block;
+    }
+
+    .md\:block {
+        display: none !important;
+    }
+}
+
+/* Utility classes */
+.text-iai-green {
+    color: var(--iai-green);
+}
+
+.bg-iai-yellow {
+    background-color: var(--iai-yellow);
+}
+
+.bg-iai-light-yellow {
+    background-color: var(--iai-light-yellow);
 }
