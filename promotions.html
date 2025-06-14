@@ -13,14 +13,51 @@
                 transform: translateX(0);
             }
             100% {
-                transform: translateX(-50%);
+                transform: translateX(calc(-272px * 4)); /* (Largeur de la carte (w-64 = 256px) + espace (16px)) * nombre de cartes */
             }
         }
         .animate-scroll {
-            animation: scroll 30s linear infinite;
+            animation: scroll 20s linear infinite;
         }
         .animate-scroll:hover {
             animation-play-state: paused;
+        }
+        .carousel-container {
+            width: 100%;
+            overflow: hidden;
+        }
+        .carousel-track {
+            display: flex;
+            width: max-content;
+            gap: 16px; /* Espace entre les cartes */
+        }
+        .student-card {
+            position: relative;
+        }
+        .student-info-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 1rem;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 10;
+            border-radius: 0.5rem 0.5rem 0 0;
+        }
+        .student-card:hover .student-info-overlay {
+            opacity: 1;
+        }
+        .student-info-overlay h4 {
+            color: white;
+            margin-bottom: 0.5rem;
+        }
+        .student-info-overlay p {
+            color: #e5e7eb;
+            font-size: 0.875rem;
+            margin-bottom: 0.25rem;
         }
     </style>
 </head>
@@ -81,10 +118,19 @@
             <!-- Carrousel étudiants (exemple) -->
             <div class="bg-gray-50 rounded-lg shadow-lg p-8">
                 <div class="relative overflow-hidden">
-                    <div class="carousel-container">
-                        <div class="flex animate-scroll space-x-6 py-6">
+            <div class="carousel-container">
+                        <div class="carousel-track animate-scroll">
+                            <!-- Premier groupe de cartes -->
                             <div class="student-card flex-shrink-0 w-64">
                                 <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                    <div class="student-info-overlay">
+                                        <h4 class="text-lg font-medium">APEDOH Kossi Kékéli</h4>
+                                        <p>Promotion: AP/LP 2024-2025</p>
+                                        <p>Parcours: Développement Web</p>
+                                        <p>Spécialité: Full Stack</p>
+                                        <p>Projets: 3 projets réalisés</p>
+                                        <p>Compétences: HTML, CSS, JavaScript, React</p>
+                                    </div>
                                     <img src="assets/images/ING/2024/kossi_kekeli.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
                                     <div class="p-4">
                                         <h4 class="text-lg font-medium text-gray-900">APEDOH Kossi Kékéli</h4>
@@ -95,6 +141,14 @@
                             </div>
                             <div class="student-card flex-shrink-0 w-64">
                                 <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                    <div class="student-info-overlay">
+                                        <h4 class="text-lg font-medium">DANSOU Koffi Junior</h4>
+                                        <p>Promotion: AP/LP 2024-2025</p>
+                                        <p>Parcours: Développement Mobile</p>
+                                        <p>Spécialité: Mobile App</p>
+                                        <p>Projets: 2 applications mobiles</p>
+                                        <p>Compétences: Flutter, Dart, Firebase</p>
+                                    </div>
                                     <img src="assets/images/ING/2024/koffi_junior.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
                                     <div class="p-4">
                                         <h4 class="text-lg font-medium text-gray-900">DANSOU Koffi Junior</h4>
@@ -103,9 +157,16 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- Duplication des cartes pour un défilement continu -->
                             <div class="student-card flex-shrink-0 w-64">
                                 <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                    <div class="student-info-overlay">
+                                        <h4 class="text-lg font-medium">APEDOH Kossi Kékéli</h4>
+                                        <p>Promotion: AP/LP 2024-2025</p>
+                                        <p>Parcours: Développement Web</p>
+                                        <p>Spécialité: Full Stack</p>
+                                        <p>Projets: 3 projets réalisés</p>
+                                        <p>Compétences: HTML, CSS, JavaScript, React</p>
+                                    </div>
                                     <img src="assets/images/ING/2024/kossi_kekeli.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
                                     <div class="p-4">
                                         <h4 class="text-lg font-medium text-gray-900">APEDOH Kossi Kékéli</h4>
@@ -116,6 +177,87 @@
                             </div>
                             <div class="student-card flex-shrink-0 w-64">
                                 <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                    <div class="student-info-overlay">
+                                        <h4 class="text-lg font-medium">DANSOU Koffi Junior</h4>
+                                        <p>Promotion: AP/LP 2024-2025</p>
+                                        <p>Parcours: Développement Mobile</p>
+                                        <p>Spécialité: Mobile App</p>
+                                        <p>Projets: 2 applications mobiles</p>
+                                        <p>Compétences: Flutter, Dart, Firebase</p>
+                                    </div>
+                                    <img src="assets/images/ING/2024/koffi_junior.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                    <div class="p-4">
+                                        <h4 class="text-lg font-medium text-gray-900">DANSOU Koffi Junior</h4>
+                                        <p class="text-gray-600">AP/LP 2024-2025</p>
+                                        <p class="text-gray-500 mt-2">Développement Mobile</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Duplication du groupe de cartes pour un défilement continu -->
+                            <div class="student-card flex-shrink-0 w-64">
+                                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                    <div class="student-info-overlay">
+                                        <h4 class="text-lg font-medium">APEDOH Kossi Kékéli</h4>
+                                        <p>Promotion: AP/LP 2024-2025</p>
+                                        <p>Parcours: Développement Web</p>
+                                        <p>Spécialité: Full Stack</p>
+                                        <p>Projets: 3 projets réalisés</p>
+                                        <p>Compétences: HTML, CSS, JavaScript, React</p>
+                                    </div>
+                                    <img src="assets/images/ING/2024/kossi_kekeli.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                    <div class="p-4">
+                                        <h4 class="text-lg font-medium text-gray-900">APEDOH Kossi Kékéli</h4>
+                                        <p class="text-gray-600">AP/LP 2024-2025</p>
+                                        <p class="text-gray-500 mt-2">Développement Web</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="student-card flex-shrink-0 w-64">
+                                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                    <div class="student-info-overlay">
+                                        <h4 class="text-lg font-medium">DANSOU Koffi Junior</h4>
+                                        <p>Promotion: AP/LP 2024-2025</p>
+                                        <p>Parcours: Développement Mobile</p>
+                                        <p>Spécialité: Mobile App</p>
+                                        <p>Projets: 2 applications mobiles</p>
+                                        <p>Compétences: Flutter, Dart, Firebase</p>
+                                    </div>
+                                    <img src="assets/images/ING/2024/koffi_junior.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                    <div class="p-4">
+                                        <h4 class="text-lg font-medium text-gray-900">DANSOU Koffi Junior</h4>
+                                        <p class="text-gray-600">AP/LP 2024-2025</p>
+                                        <p class="text-gray-500 mt-2">Développement Mobile</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="student-card flex-shrink-0 w-64">
+                                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                    <div class="student-info-overlay">
+                                        <h4 class="text-lg font-medium">APEDOH Kossi Kékéli</h4>
+                                        <p>Promotion: AP/LP 2024-2025</p>
+                                        <p>Parcours: Développement Web</p>
+                                        <p>Spécialité: Full Stack</p>
+                                        <p>Projets: 3 projets réalisés</p>
+                                        <p>Compétences: HTML, CSS, JavaScript, React</p>
+                                    </div>
+                                    <img src="assets/images/ING/2024/kossi_kekeli.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                    <div class="p-4">
+                                        <h4 class="text-lg font-medium text-gray-900">APEDOH Kossi Kékéli</h4>
+                                        <p class="text-gray-600">AP/LP 2024-2025</p>
+                                        <p class="text-gray-500 mt-2">Développement Web</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="student-card flex-shrink-0 w-64">
+                                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                    <div class="student-info-overlay">
+                                        <h4 class="text-lg font-medium">DANSOU Koffi Junior</h4>
+                                        <p>Promotion: AP/LP 2024-2025</p>
+                                        <p>Parcours: Développement Mobile</p>
+                                        <p>Spécialité: Mobile App</p>
+                                        <p>Projets: 2 applications mobiles</p>
+                                        <p>Compétences: Flutter, Dart, Firebase</p>
+                                    </div>
                                     <img src="assets/images/ING/2024/koffi_junior.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
                                     <div class="p-4">
                                         <h4 class="text-lg font-medium text-gray-900">DANSOU Koffi Junior</h4>
@@ -176,10 +318,19 @@
             </div>
             <div class="bg-gray-50 rounded-lg shadow-lg p-8">
                 <div class="relative overflow-hidden">
-                    <div class="carousel-container">
-                        <div class="flex animate-scroll space-x-6 py-6">
+            <div class="carousel-container">
+                        <div class="carousel-track animate-scroll">
+                            <!-- Premier groupe de cartes -->
                             <div class="student-card flex-shrink-0 w-64">
                                 <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                    <div class="student-info-overlay">
+                                        <h4 class="text-lg font-medium">APEDOH Kossi Kékéli</h4>
+                                        <p>Promotion: MIAGE 2024-2025</p>
+                                        <p>Parcours: Gestion de Projet</p>
+                                        <p>Spécialité: Gestion de Projet</p>
+                                        <p>Projets: 1 projet réalisé</p>
+                                        <p>Compétences: Project Management</p>
+                                    </div>
                                     <img src="assets/images/ING/2024/kossi_kekeli.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
                                     <div class="p-4">
                                         <h4 class="text-lg font-medium text-gray-900">APEDOH Kossi Kékéli</h4>
@@ -190,6 +341,14 @@
                             </div>
                             <div class="student-card flex-shrink-0 w-64">
                                 <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                    <div class="student-info-overlay">
+                                        <h4 class="text-lg font-medium">DANSOU Koffi Junior</h4>
+                                        <p>Promotion: MIAGE 2024-2025</p>
+                                        <p>Parcours: Business Intelligence</p>
+                                        <p>Spécialité: Business Intelligence</p>
+                                        <p>Projets: 1 projet réalisé</p>
+                                        <p>Compétences: Data Analysis</p>
+                                    </div>
                                     <img src="assets/images/ING/2024/koffi_junior.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
                                     <div class="p-4">
                                         <h4 class="text-lg font-medium text-gray-900">DANSOU Koffi Junior</h4>
@@ -198,9 +357,16 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- Duplication des cartes pour un défilement continu -->
                             <div class="student-card flex-shrink-0 w-64">
                                 <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                    <div class="student-info-overlay">
+                                        <h4 class="text-lg font-medium">APEDOH Kossi Kékéli</h4>
+                                        <p>Promotion: MIAGE 2024-2025</p>
+                                        <p>Parcours: Gestion de Projet</p>
+                                        <p>Spécialité: Gestion de Projet</p>
+                                        <p>Projets: 1 projet réalisé</p>
+                                        <p>Compétences: Project Management</p>
+                                    </div>
                                     <img src="assets/images/ING/2024/kossi_kekeli.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
                                     <div class="p-4">
                                         <h4 class="text-lg font-medium text-gray-900">APEDOH Kossi Kékéli</h4>
@@ -211,6 +377,87 @@
                             </div>
                             <div class="student-card flex-shrink-0 w-64">
                                 <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                    <div class="student-info-overlay">
+                                        <h4 class="text-lg font-medium">DANSOU Koffi Junior</h4>
+                                        <p>Promotion: MIAGE 2024-2025</p>
+                                        <p>Parcours: Business Intelligence</p>
+                                        <p>Spécialité: Business Intelligence</p>
+                                        <p>Projets: 1 projet réalisé</p>
+                                        <p>Compétences: Data Analysis</p>
+                                    </div>
+                                    <img src="assets/images/ING/2024/koffi_junior.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                    <div class="p-4">
+                                        <h4 class="text-lg font-medium text-gray-900">DANSOU Koffi Junior</h4>
+                                        <p class="text-gray-600">MIAGE 2024-2025</p>
+                                        <p class="text-gray-500 mt-2">Business Intelligence</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Duplication du groupe de cartes pour un défilement continu -->
+                            <div class="student-card flex-shrink-0 w-64">
+                                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                    <div class="student-info-overlay">
+                                        <h4 class="text-lg font-medium">APEDOH Kossi Kékéli</h4>
+                                        <p>Promotion: MIAGE 2024-2025</p>
+                                        <p>Parcours: Gestion de Projet</p>
+                                        <p>Spécialité: Gestion de Projet</p>
+                                        <p>Projets: 1 projet réalisé</p>
+                                        <p>Compétences: Project Management</p>
+                                    </div>
+                                    <img src="assets/images/ING/2024/kossi_kekeli.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                    <div class="p-4">
+                                        <h4 class="text-lg font-medium text-gray-900">APEDOH Kossi Kékéli</h4>
+                                        <p class="text-gray-600">MIAGE 2024-2025</p>
+                                        <p class="text-gray-500 mt-2">Gestion de Projet</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="student-card flex-shrink-0 w-64">
+                                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                    <div class="student-info-overlay">
+                                        <h4 class="text-lg font-medium">DANSOU Koffi Junior</h4>
+                                        <p>Promotion: MIAGE 2024-2025</p>
+                                        <p>Parcours: Business Intelligence</p>
+                                        <p>Spécialité: Business Intelligence</p>
+                                        <p>Projets: 1 projet réalisé</p>
+                                        <p>Compétences: Data Analysis</p>
+                                    </div>
+                                    <img src="assets/images/ING/2024/koffi_junior.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                    <div class="p-4">
+                                        <h4 class="text-lg font-medium text-gray-900">DANSOU Koffi Junior</h4>
+                                        <p class="text-gray-600">MIAGE 2024-2025</p>
+                                        <p class="text-gray-500 mt-2">Business Intelligence</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="student-card flex-shrink-0 w-64">
+                                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                    <div class="student-info-overlay">
+                                        <h4 class="text-lg font-medium">APEDOH Kossi Kékéli</h4>
+                                        <p>Promotion: MIAGE 2024-2025</p>
+                                        <p>Parcours: Gestion de Projet</p>
+                                        <p>Spécialité: Gestion de Projet</p>
+                                        <p>Projets: 1 projet réalisé</p>
+                                        <p>Compétences: Project Management</p>
+                                    </div>
+                                    <img src="assets/images/ING/2024/kossi_kekeli.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                    <div class="p-4">
+                                        <h4 class="text-lg font-medium text-gray-900">APEDOH Kossi Kékéli</h4>
+                                        <p class="text-gray-600">MIAGE 2024-2025</p>
+                                        <p class="text-gray-500 mt-2">Gestion de Projet</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="student-card flex-shrink-0 w-64">
+                                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                    <div class="student-info-overlay">
+                                        <h4 class="text-lg font-medium">DANSOU Koffi Junior</h4>
+                                        <p>Promotion: MIAGE 2024-2025</p>
+                                        <p>Parcours: Business Intelligence</p>
+                                        <p>Spécialité: Business Intelligence</p>
+                                        <p>Projets: 1 projet réalisé</p>
+                                        <p>Compétences: Data Analysis</p>
+                                    </div>
                                     <img src="assets/images/ING/2024/koffi_junior.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
                                     <div class="p-4">
                                         <h4 class="text-lg font-medium text-gray-900">DANSOU Koffi Junior</h4>
@@ -270,10 +517,19 @@
             </div>
             <div class="bg-gray-50 rounded-lg shadow-lg p-8">
                 <div class="relative overflow-hidden">
-                    <div class="carousel-container">
-                        <div class="flex animate-scroll space-x-6 py-6">
+            <div class="carousel-container">
+                        <div class="carousel-track animate-scroll">
+                            <!-- Premier groupe de cartes -->
                             <div class="student-card flex-shrink-0 w-64">
                                 <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                    <div class="student-info-overlay">
+                                        <h4 class="text-lg font-medium">APEDOH Kossi Kékéli</h4>
+                                        <p>Promotion: ING 2024-2025</p>
+                                        <p>Parcours: Intelligence Artificielle</p>
+                                        <p>Spécialité: Intelligence Artificielle</p>
+                                        <p>Projets: 2 projets réalisés</p>
+                                        <p>Compétences: Machine Learning, Python</p>
+                                    </div>
                                     <img src="assets/images/ING/2024/kossi_kekeli.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
                                     <div class="p-4">
                                         <h4 class="text-lg font-medium text-gray-900">APEDOH Kossi Kékéli</h4>
@@ -284,6 +540,14 @@
                             </div>
                             <div class="student-card flex-shrink-0 w-64">
                                 <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                    <div class="student-info-overlay">
+                                        <h4 class="text-lg font-medium">DANSOU Koffi Junior</h4>
+                                        <p>Promotion: ING 2024-2025</p>
+                                        <p>Parcours: Cybersécurité</p>
+                                        <p>Spécialité: Cybersécurité</p>
+                                        <p>Projets: 1 projet réalisé</p>
+                                        <p>Compétences: Network Security</p>
+                                    </div>
                                     <img src="assets/images/ING/2024/koffi_junior.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
                                     <div class="p-4">
                                         <h4 class="text-lg font-medium text-gray-900">DANSOU Koffi Junior</h4>
@@ -292,9 +556,16 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- Duplication des cartes pour un défilement continu -->
                             <div class="student-card flex-shrink-0 w-64">
                                 <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                    <div class="student-info-overlay">
+                                        <h4 class="text-lg font-medium">APEDOH Kossi Kékéli</h4>
+                                        <p>Promotion: ING 2024-2025</p>
+                                        <p>Parcours: Intelligence Artificielle</p>
+                                        <p>Spécialité: Intelligence Artificielle</p>
+                                        <p>Projets: 2 projets réalisés</p>
+                                        <p>Compétences: Machine Learning, Python</p>
+                                    </div>
                                     <img src="assets/images/ING/2024/kossi_kekeli.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
                                     <div class="p-4">
                                         <h4 class="text-lg font-medium text-gray-900">APEDOH Kossi Kékéli</h4>
@@ -305,6 +576,87 @@
                             </div>
                             <div class="student-card flex-shrink-0 w-64">
                                 <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                    <div class="student-info-overlay">
+                                        <h4 class="text-lg font-medium">DANSOU Koffi Junior</h4>
+                                        <p>Promotion: ING 2024-2025</p>
+                                        <p>Parcours: Cybersécurité</p>
+                                        <p>Spécialité: Cybersécurité</p>
+                                        <p>Projets: 1 projet réalisé</p>
+                                        <p>Compétences: Network Security</p>
+                                    </div>
+                                    <img src="assets/images/ING/2024/koffi_junior.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                    <div class="p-4">
+                                        <h4 class="text-lg font-medium text-gray-900">DANSOU Koffi Junior</h4>
+                                        <p class="text-gray-600">ING 2024-2025</p>
+                                        <p class="text-gray-500 mt-2">Cybersécurité</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Duplication du groupe de cartes pour un défilement continu -->
+                            <div class="student-card flex-shrink-0 w-64">
+                                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                    <div class="student-info-overlay">
+                                        <h4 class="text-lg font-medium">APEDOH Kossi Kékéli</h4>
+                                        <p>Promotion: ING 2024-2025</p>
+                                        <p>Parcours: Intelligence Artificielle</p>
+                                        <p>Spécialité: Intelligence Artificielle</p>
+                                        <p>Projets: 2 projets réalisés</p>
+                                        <p>Compétences: Machine Learning, Python</p>
+                                    </div>
+                                    <img src="assets/images/ING/2024/kossi_kekeli.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                    <div class="p-4">
+                                        <h4 class="text-lg font-medium text-gray-900">APEDOH Kossi Kékéli</h4>
+                                        <p class="text-gray-600">ING 2024-2025</p>
+                                        <p class="text-gray-500 mt-2">Intelligence Artificielle</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="student-card flex-shrink-0 w-64">
+                                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                    <div class="student-info-overlay">
+                                        <h4 class="text-lg font-medium">DANSOU Koffi Junior</h4>
+                                        <p>Promotion: ING 2024-2025</p>
+                                        <p>Parcours: Cybersécurité</p>
+                                        <p>Spécialité: Cybersécurité</p>
+                                        <p>Projets: 1 projet réalisé</p>
+                                        <p>Compétences: Network Security</p>
+                                    </div>
+                                    <img src="assets/images/ING/2024/koffi_junior.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                    <div class="p-4">
+                                        <h4 class="text-lg font-medium text-gray-900">DANSOU Koffi Junior</h4>
+                                        <p class="text-gray-600">ING 2024-2025</p>
+                                        <p class="text-gray-500 mt-2">Cybersécurité</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="student-card flex-shrink-0 w-64">
+                                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                    <div class="student-info-overlay">
+                                        <h4 class="text-lg font-medium">APEDOH Kossi Kékéli</h4>
+                                        <p>Promotion: ING 2024-2025</p>
+                                        <p>Parcours: Intelligence Artificielle</p>
+                                        <p>Spécialité: Intelligence Artificielle</p>
+                                        <p>Projets: 2 projets réalisés</p>
+                                        <p>Compétences: Machine Learning, Python</p>
+                                    </div>
+                                    <img src="assets/images/ING/2024/kossi_kekeli.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                    <div class="p-4">
+                                        <h4 class="text-lg font-medium text-gray-900">APEDOH Kossi Kékéli</h4>
+                                        <p class="text-gray-600">ING 2024-2025</p>
+                                        <p class="text-gray-500 mt-2">Intelligence Artificielle</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="student-card flex-shrink-0 w-64">
+                                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                    <div class="student-info-overlay">
+                                        <h4 class="text-lg font-medium">DANSOU Koffi Junior</h4>
+                                        <p>Promotion: ING 2024-2025</p>
+                                        <p>Parcours: Cybersécurité</p>
+                                        <p>Spécialité: Cybersécurité</p>
+                                        <p>Projets: 1 projet réalisé</p>
+                                        <p>Compétences: Network Security</p>
+                                    </div>
                                     <img src="assets/images/ING/2024/koffi_junior.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
                                     <div class="p-4">
                                         <h4 class="text-lg font-medium text-gray-900">DANSOU Koffi Junior</h4>
@@ -365,9 +717,18 @@
             <div class="bg-gray-50 rounded-lg shadow-lg p-8">
                 <div class="relative overflow-hidden">
                     <div class="carousel-container">
-                        <div class="flex animate-scroll space-x-6 py-6">
+                        <div class="carousel-track animate-scroll">
+                            <!-- Premier groupe de cartes -->
                             <div class="student-card flex-shrink-0 w-64">
                                 <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                    <div class="student-info-overlay">
+                                        <h4 class="text-lg font-medium">APEDOH Kossi Kékéli</h4>
+                                        <p>Promotion: MASTER 2024-2025</p>
+                                        <p>Parcours: IA & Big Data</p>
+                                        <p>Spécialité: Intelligence Artificielle</p>
+                                        <p>Projets: 2 projets réalisés</p>
+                                        <p>Compétences: Machine Learning, Deep Learning, Python</p>
+                                    </div>
                                     <img src="assets/images/ING/2024/kossi_kekeli.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
                                     <div class="p-4">
                                         <h4 class="text-lg font-medium text-gray-900">APEDOH Kossi Kékéli</h4>
@@ -378,6 +739,14 @@
                             </div>
                             <div class="student-card flex-shrink-0 w-64">
                                 <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                    <div class="student-info-overlay">
+                                        <h4 class="text-lg font-medium">DANSOU Koffi Junior</h4>
+                                        <p>Promotion: MASTER 2024-2025</p>
+                                        <p>Parcours: Cybersécurité</p>
+                                        <p>Spécialité: Sécurité des Réseaux</p>
+                                        <p>Projets: 1 projet réalisé</p>
+                                        <p>Compétences: Network Security, Ethical Hacking</p>
+                                    </div>
                                     <img src="assets/images/ING/2024/koffi_junior.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
                                     <div class="p-4">
                                         <h4 class="text-lg font-medium text-gray-900">DANSOU Koffi Junior</h4>
@@ -386,9 +755,17 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- Duplication des cartes pour un défilement continu -->
+                            <!-- Duplication du groupe de cartes pour un défilement continu -->
                             <div class="student-card flex-shrink-0 w-64">
                                 <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                    <div class="student-info-overlay">
+                                        <h4 class="text-lg font-medium">APEDOH Kossi Kékéli</h4>
+                                        <p>Promotion: MASTER 2024-2025</p>
+                                        <p>Parcours: IA & Big Data</p>
+                                        <p>Spécialité: Intelligence Artificielle</p>
+                                        <p>Projets: 2 projets réalisés</p>
+                                        <p>Compétences: Machine Learning, Deep Learning, Python</p>
+                                    </div>
                                     <img src="assets/images/ING/2024/kossi_kekeli.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
                                     <div class="p-4">
                                         <h4 class="text-lg font-medium text-gray-900">APEDOH Kossi Kékéli</h4>
@@ -399,6 +776,14 @@
                             </div>
                             <div class="student-card flex-shrink-0 w-64">
                                 <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                    <div class="student-info-overlay">
+                                        <h4 class="text-lg font-medium">DANSOU Koffi Junior</h4>
+                                        <p>Promotion: MASTER 2024-2025</p>
+                                        <p>Parcours: Cybersécurité</p>
+                                        <p>Spécialité: Sécurité des Réseaux</p>
+                                        <p>Projets: 1 projet réalisé</p>
+                                        <p>Compétences: Network Security, Ethical Hacking</p>
+                                    </div>
                                     <img src="assets/images/ING/2024/koffi_junior.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
                                     <div class="p-4">
                                         <h4 class="text-lg font-medium text-gray-900">DANSOU Koffi Junior</h4>
