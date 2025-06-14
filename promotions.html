@@ -7,6 +7,22 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <style>
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+        .animate-scroll {
+            animation: scroll 30s linear infinite;
+        }
+        .animate-scroll:hover {
+            animation-play-state: paused;
+        }
+    </style>
 </head>
 <body class="bg-gray-50">
     <!-- Navigation -->
@@ -32,7 +48,7 @@
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
         <!-- Section choix promotions -->
         <section class="mb-16">
-            <h1 class="section-title text-4xl font-bold mb-8">CHOISISSEZ UN promotions</h1>
+            <h1 class="section-title text-4xl font-bold mb-8">Visualisez les Promotions</h1>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <a href="#ap-lp" class="bg-white rounded-lg shadow-lg p-8 text-center hover:bg-blue-50 transition">
                     <h3 class="text-2xl font-bold text-blue-600 mb-2">AP/LP</h3>
@@ -63,16 +79,90 @@
                 <a href="#aplp-2024" class="bg-blue-100 px-4 py-2 rounded hover:bg-blue-200">2024</a>
             </div>
             <!-- Carrousel étudiants (exemple) -->
-            <div class="carousel-container">
-                <div class="carousel-track">
-                    <div class="student-card w-64 mx-4">
-                        <img src="images/placeholder.jpg" alt="Étudiant" class="w-full h-64 object-cover rounded-lg hover-zoom">
-                        <h4 class="mt-4 text-lg font-medium text-gray-900">Nom de l'étudiant</h4>
-                        <p class="text-gray-600">AP/LP 2023-2024</p>
+            <div class="bg-gray-50 rounded-lg shadow-lg p-8">
+                <div class="relative overflow-hidden">
+                    <div class="carousel-container">
+                        <div class="flex animate-scroll space-x-6 py-6">
+                            <div class="student-card flex-shrink-0 w-64">
+                                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                    <img src="assets/images/ING/2024/kossi_kekeli.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                    <div class="p-4">
+                                        <h4 class="text-lg font-medium text-gray-900">APEDOH Kossi Kékéli</h4>
+                                        <p class="text-gray-600">AP/LP 2024-2025</p>
+                                        <p class="text-gray-500 mt-2">Développement Web</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="student-card flex-shrink-0 w-64">
+                                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                    <img src="assets/images/ING/2024/koffi_junior.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                    <div class="p-4">
+                                        <h4 class="text-lg font-medium text-gray-900">DANSOU Koffi Junior</h4>
+                                        <p class="text-gray-600">AP/LP 2024-2025</p>
+                                        <p class="text-gray-500 mt-2">Développement Mobile</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Duplication des cartes pour un défilement continu -->
+                            <div class="student-card flex-shrink-0 w-64">
+                                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                    <img src="assets/images/ING/2024/kossi_kekeli.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                    <div class="p-4">
+                                        <h4 class="text-lg font-medium text-gray-900">APEDOH Kossi Kékéli</h4>
+                                        <p class="text-gray-600">AP/LP 2024-2025</p>
+                                        <p class="text-gray-500 mt-2">Développement Web</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="student-card flex-shrink-0 w-64">
+                                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                    <img src="assets/images/ING/2024/koffi_junior.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                    <div class="p-4">
+                                        <h4 class="text-lg font-medium text-gray-900">DANSOU Koffi Junior</h4>
+                                        <p class="text-gray-600">AP/LP 2024-2025</p>
+                                        <p class="text-gray-500 mt-2">Développement Mobile</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <!-- ... autres étudiants ... -->
                 </div>
             </div>
+            <!-- Tableau des étudiants -->
+            <details class="mt-8 bg-white rounded-lg shadow-lg p-6">
+                <summary class="text-xl font-semibold text-blue-600 cursor-pointer hover:text-blue-800">
+                    Liste complète des étudiants AP/LP 2024-2025
+                </summary>
+                <div class="mt-4 overflow-x-auto">
+                    <table class="min-w-full divide-y divide-gray-200">
+                        <thead class="bg-gray-50">
+                            <tr>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Nom complet</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Sexe</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Téléphone</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Promotion</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Parcours</th>
+                            </tr>
+                        </thead>
+                        <tbody class="bg-white divide-y divide-gray-200">
+                            <tr>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">APEDOH Kossi Kékéli</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">M</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">+228 XX XX XX XX</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">AP/LP 2024-2025</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Développement Web</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">DANSOU Koffi Junior</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">M</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">+228 XX XX XX XX</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">AP/LP 2024-2025</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Développement Mobile</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </details>
         </section>
         <!-- Répéter pour MIAGE et ING -->
         <section class="mb-16" id="miage">
@@ -84,15 +174,90 @@
                 <a href="#miage-2023" class="bg-purple-100 px-4 py-2 rounded hover:bg-purple-200">2023</a>
                 <a href="#miage-2024" class="bg-purple-100 px-4 py-2 rounded hover:bg-purple-200">2024</a>
             </div>
-            <div class="carousel-container">
-                <div class="carousel-track">
-                    <div class="student-card w-64 mx-4">
-                        <img src="images/placeholder.jpg" alt="Étudiant" class="w-full h-64 object-cover rounded-lg hover-zoom">
-                        <h4 class="mt-4 text-lg font-medium text-gray-900">Nom de l'étudiant</h4>
-                        <p class="text-gray-600">MIAGE 2023-2024</p>
+            <div class="bg-gray-50 rounded-lg shadow-lg p-8">
+                <div class="relative overflow-hidden">
+                    <div class="carousel-container">
+                        <div class="flex animate-scroll space-x-6 py-6">
+                            <div class="student-card flex-shrink-0 w-64">
+                                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                    <img src="assets/images/ING/2024/kossi_kekeli.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                    <div class="p-4">
+                                        <h4 class="text-lg font-medium text-gray-900">APEDOH Kossi Kékéli</h4>
+                                        <p class="text-gray-600">MIAGE 2024-2025</p>
+                                        <p class="text-gray-500 mt-2">Gestion de Projet</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="student-card flex-shrink-0 w-64">
+                                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                    <img src="assets/images/ING/2024/koffi_junior.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                    <div class="p-4">
+                                        <h4 class="text-lg font-medium text-gray-900">DANSOU Koffi Junior</h4>
+                                        <p class="text-gray-600">MIAGE 2024-2025</p>
+                                        <p class="text-gray-500 mt-2">Business Intelligence</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Duplication des cartes pour un défilement continu -->
+                            <div class="student-card flex-shrink-0 w-64">
+                                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                    <img src="assets/images/ING/2024/kossi_kekeli.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                    <div class="p-4">
+                                        <h4 class="text-lg font-medium text-gray-900">APEDOH Kossi Kékéli</h4>
+                                        <p class="text-gray-600">MIAGE 2024-2025</p>
+                                        <p class="text-gray-500 mt-2">Gestion de Projet</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="student-card flex-shrink-0 w-64">
+                                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                    <img src="assets/images/ING/2024/koffi_junior.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                    <div class="p-4">
+                                        <h4 class="text-lg font-medium text-gray-900">DANSOU Koffi Junior</h4>
+                                        <p class="text-gray-600">MIAGE 2024-2025</p>
+                                        <p class="text-gray-500 mt-2">Business Intelligence</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+            <!-- Tableau des étudiants -->
+            <details class="mt-8 bg-white rounded-lg shadow-lg p-6">
+                <summary class="text-xl font-semibold text-purple-600 cursor-pointer hover:text-purple-800">
+                    Liste complète des étudiants MIAGE 2024-2025
+                </summary>
+                <div class="mt-4 overflow-x-auto">
+                    <table class="min-w-full divide-y divide-gray-200">
+                        <thead class="bg-gray-50">
+                            <tr>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Nom complet</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Sexe</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Téléphone</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Promotion</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Parcours</th>
+                            </tr>
+                        </thead>
+                        <tbody class="bg-white divide-y divide-gray-200">
+                            <tr>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">APEDOH Kossi Kékéli</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">M</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">+228 XX XX XX XX</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">MIAGE 2024-2025</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Gestion de Projet</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">DANSOU Koffi Junior</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">M</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">+228 XX XX XX XX</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">MIAGE 2024-2025</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Business Intelligence</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </details>
         </section>
         <section class="mb-16" id="ing">
             <h2 class="text-2xl font-bold text-indigo-600 mb-4">ING - Promotions</h2>
@@ -103,15 +268,90 @@
                 <a href="#ing-2023" class="bg-indigo-100 px-4 py-2 rounded hover:bg-indigo-200">2023</a>
                 <a href="#ing-2024" class="bg-indigo-100 px-4 py-2 rounded hover:bg-indigo-200">2024</a>
             </div>
-            <div class="carousel-container">
-                <div class="carousel-track">
-                    <div class="student-card w-64 mx-4">
-                        <img src="images/placeholder.jpg" alt="Étudiant" class="w-full h-64 object-cover rounded-lg hover-zoom">
-                        <h4 class="mt-4 text-lg font-medium text-gray-900">Nom de l'étudiant</h4>
-                        <p class="text-gray-600">ING 2023-2024</p>
+            <div class="bg-gray-50 rounded-lg shadow-lg p-8">
+                <div class="relative overflow-hidden">
+                    <div class="carousel-container">
+                        <div class="flex animate-scroll space-x-6 py-6">
+                            <div class="student-card flex-shrink-0 w-64">
+                                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                    <img src="assets/images/ING/2024/kossi_kekeli.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                    <div class="p-4">
+                                        <h4 class="text-lg font-medium text-gray-900">APEDOH Kossi Kékéli</h4>
+                                        <p class="text-gray-600">ING 2024-2025</p>
+                                        <p class="text-gray-500 mt-2">Intelligence Artificielle</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="student-card flex-shrink-0 w-64">
+                                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                    <img src="assets/images/ING/2024/koffi_junior.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                    <div class="p-4">
+                                        <h4 class="text-lg font-medium text-gray-900">DANSOU Koffi Junior</h4>
+                                        <p class="text-gray-600">ING 2024-2025</p>
+                                        <p class="text-gray-500 mt-2">Cybersécurité</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Duplication des cartes pour un défilement continu -->
+                            <div class="student-card flex-shrink-0 w-64">
+                                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                    <img src="assets/images/ING/2024/kossi_kekeli.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                    <div class="p-4">
+                                        <h4 class="text-lg font-medium text-gray-900">APEDOH Kossi Kékéli</h4>
+                                        <p class="text-gray-600">ING 2024-2025</p>
+                                        <p class="text-gray-500 mt-2">Intelligence Artificielle</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="student-card flex-shrink-0 w-64">
+                                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                    <img src="assets/images/ING/2024/koffi_junior.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                    <div class="p-4">
+                                        <h4 class="text-lg font-medium text-gray-900">DANSOU Koffi Junior</h4>
+                                        <p class="text-gray-600">ING 2024-2025</p>
+                                        <p class="text-gray-500 mt-2">Cybersécurité</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+            <!-- Tableau des étudiants -->
+            <details class="mt-8 bg-white rounded-lg shadow-lg p-6">
+                <summary class="text-xl font-semibold text-indigo-600 cursor-pointer hover:text-indigo-800">
+                    Liste complète des étudiants ING 2024-2025
+                </summary>
+                <div class="mt-4 overflow-x-auto">
+                    <table class="min-w-full divide-y divide-gray-200">
+                        <thead class="bg-gray-50">
+                            <tr>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Nom complet</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Sexe</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Téléphone</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Promotion</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Parcours</th>
+                            </tr>
+                        </thead>
+                        <tbody class="bg-white divide-y divide-gray-200">
+                            <tr>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">APEDOH Kossi Kékéli</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">M</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">+228 XX XX XX XX</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">ING 2024-2025</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Intelligence Artificielle</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">DANSOU Koffi Junior</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">M</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">+228 XX XX XX XX</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">ING 2024-2025</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Cybersécurité</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </details>
         </section>
         <section class="mb-16" id="master">
             <h2 class="text-2xl font-bold text-indigo-600 mb-4">MASTER - Promotions</h2>
@@ -122,15 +362,90 @@
                 <a href="#master-2023" class="bg-indigo-100 px-4 py-2 rounded hover:bg-indigo-200">2023</a>
                 <a href="#master-2024" class="bg-indigo-100 px-4 py-2 rounded hover:bg-indigo-200">2024</a>
             </div>
-            <div class="carousel-container">
-                <div class="carousel-track">
-                    <div class="student-card w-64 mx-4">
-                        <img src="images/placeholder.jpg" alt="Étudiant" class="w-full h-64 object-cover rounded-lg hover-zoom">
-                        <h4 class="mt-4 text-lg font-medium text-gray-900">Nom de l'étudiant</h4>
-                        <p class="text-gray-600">MASTER 2023-2024</p>
+            <div class="bg-gray-50 rounded-lg shadow-lg p-8">
+                <div class="relative overflow-hidden">
+                    <div class="carousel-container">
+                        <div class="flex animate-scroll space-x-6 py-6">
+                            <div class="student-card flex-shrink-0 w-64">
+                                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                    <img src="assets/images/ING/2024/kossi_kekeli.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                    <div class="p-4">
+                                        <h4 class="text-lg font-medium text-gray-900">APEDOH Kossi Kékéli</h4>
+                                        <p class="text-gray-600">MASTER 2024-2025</p>
+                                        <p class="text-gray-500 mt-2">IA & Big Data</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="student-card flex-shrink-0 w-64">
+                                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                    <img src="assets/images/ING/2024/koffi_junior.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                    <div class="p-4">
+                                        <h4 class="text-lg font-medium text-gray-900">DANSOU Koffi Junior</h4>
+                                        <p class="text-gray-600">MASTER 2024-2025</p>
+                                        <p class="text-gray-500 mt-2">Cybersécurité</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Duplication des cartes pour un défilement continu -->
+                            <div class="student-card flex-shrink-0 w-64">
+                                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                    <img src="assets/images/ING/2024/kossi_kekeli.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                    <div class="p-4">
+                                        <h4 class="text-lg font-medium text-gray-900">APEDOH Kossi Kékéli</h4>
+                                        <p class="text-gray-600">MASTER 2024-2025</p>
+                                        <p class="text-gray-500 mt-2">IA & Big Data</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="student-card flex-shrink-0 w-64">
+                                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                    <img src="assets/images/ING/2024/koffi_junior.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                    <div class="p-4">
+                                        <h4 class="text-lg font-medium text-gray-900">DANSOU Koffi Junior</h4>
+                                        <p class="text-gray-600">MASTER 2024-2025</p>
+                                        <p class="text-gray-500 mt-2">Cybersécurité</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+            <!-- Tableau des étudiants -->
+            <details class="mt-8 bg-white rounded-lg shadow-lg p-6">
+                <summary class="text-xl font-semibold text-indigo-600 cursor-pointer hover:text-indigo-800">
+                    Liste complète des étudiants MASTER 2024-2025
+                </summary>
+                <div class="mt-4 overflow-x-auto">
+                    <table class="min-w-full divide-y divide-gray-200">
+                        <thead class="bg-gray-50">
+                            <tr>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Nom complet</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Sexe</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Téléphone</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Promotion</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Parcours</th>
+                            </tr>
+                        </thead>
+                        <tbody class="bg-white divide-y divide-gray-200">
+                            <tr>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">APEDOH Kossi Kékéli</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">M</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">+228 XX XX XX XX</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">MASTER 2024-2025</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">IA & Big Data</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">DANSOU Koffi Junior</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">M</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">+228 XX XX XX XX</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">MASTER 2024-2025</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Cybersécurité</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </details>
         </section>
     </main>
 
