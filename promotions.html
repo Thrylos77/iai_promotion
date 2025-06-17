@@ -10,18 +10,18 @@
     <link href="css/style.css" rel="stylesheet">
     <style>
         @keyframes scroll {
-            0% {
-                transform: translateX(0);
-            }
-            100% {
-                transform: translateX(calc(-272px * 4)); /* (Largeur de la carte (w-64 = 256px) + espace (16px)) * nombre de cartes */
-            }
+        0% {
+            transform: translateX(0);
         }
+        100% {
+            transform: translateX(calc(-272px * 35)); /* Remplacez N par le nombre de cartes */
+        }
+}
         .animate-scroll {
-            animation: scroll 20s linear infinite;
+            animation: scroll 50s linear infinite;
         }
         .animate-scroll:hover {
-            animation-play-state: paused;
+            animation-play-state: running;
         }
         .carousel-container {
             width: 100%;
@@ -91,10 +91,10 @@
         <!-- Générations pour chaque promotions -->
         <section class="mb-16" id="ap-lp">
             <h2 class="text-2xl font-bold text-blue-600 mb-4">AP/LP - Promotions</h2>
-            <div class="flex flex-wrap gap-4 mb-8">
+            <div class="flex flex-wrap ">
 
                 <!--debut 2020-->
-                <details id="aplp-2020" class="mb-6 border border-blue-200 rounded-md p-4 bg-white">
+                <details id="aplp-2020" class="mb-6 border border-blue-200 rounded-md p-4 bg-white max-w-full">
                     <summary class="cursor-pointer text-blue-600 font-semibold text-lg">
                         2020
                     </summary>
@@ -103,264 +103,589 @@
                     <div class="carousel-container">
                                 <div class="carousel-track animate-scroll">
                                     <!-- Premier groupe de cartes -->
-                                    <!-- ATOME ESSONE Giovanni Paolo -->
-                                    <div class="student-card flex-shrink-0 w-64">
-                                        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                                            <div class="student-info-overlay">
-                                                <h4 class="text-lg font-medium">ATOME ESSONE Giovanni Paolo</h4>
-                                                <p>Sexe: M</p>
-                                                <p>Téléphone: +241 077 30 71 93</p>
-                                                <p>Parcours: ING</p>
-                                                <p>Promotion: 2020</p>
-                                            </div>
-                                            <img src="assets/images/AP-LP/2020/PABLO.jpeg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
-                                            <div class="p-4">
-                                                <h4 class="text-lg font-medium text-gray-900">ATOME ESSONE Giovanni Paolo</h4>
-                                                <p class="text-gray-600">AP1 2020</p>
+                                     <!-- Mademoiselle AKELE OVONO Anushka -->
+                                        <div class="student-card flex-shrink-0 w-64">
+                                            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                                <div class="student-info-overlay">
+                                                    <h4 class="text-lg font-medium">AKELE OVONO Anushka</h4>
+                                                    <p>Sexe: F</p>
+                                                    <p>Téléphone: </p>
+                                                    <p>Parcours: AP</p>
+                                                    <p>Promotion: 2020</p>
+                                                </div>
+                                                <img src="assets/images/image/user.jpg" alt="Étudiante" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                                <div class="p-4">
+                                                    <h4 class="text-lg font-medium text-gray-900">AKELE OVONO Anushka</h4>
+                                                    <p class="text-gray-600">AP1 2020</p>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
 
-                                    <!-- BOUNZANGA MBOUISSOU Axel-Derlin -->
-                                    <div class="student-card flex-shrink-0 w-64">
-                                        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                                            <div class="student-info-overlay">
-                                                <h4 class="text-lg font-medium">BOUNZANGA MBOUISSOU Axel-Derlin</h4>
-                                                <p>Sexe: M</p>
-                                                <p>Téléphone: +241 077 30 71 93</p>
-                                                <p>Parcours: ING</p>
-                                                <p>Promotion: 2020</p>
-                                            </div>
-                                            <img src="assets/images/image/alex.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
-                                            <div class="p-4">
-                                                <h4 class="text-lg font-medium text-gray-900">BOUNZANGA MBOUISSOU Axel-Derlin</h4>
-                                                <p class="text-gray-600">AP1 2020</p>
+                                        <!-- Monsieur ASSOUME IKAPI Fred Deriuse -->
+                                        <div class="student-card flex-shrink-0 w-64">
+                                            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                                <div class="student-info-overlay">
+                                                    <h4 class="text-lg font-medium">ASSOUME IKAPI Fred Deriuse</h4>
+                                                    <p>Sexe: M</p>
+                                                    <p>Téléphone: </p>
+                                                    <p>Parcours: AP</p>
+                                                    <p>Promotion: 2020</p>
+                                                </div>
+                                                <img src="assets/images/image/user.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                                <div class="p-4">
+                                                    <h4 class="text-lg font-medium text-gray-900">ASSOUME IKAPI Fred Deriuse</h4>
+                                                    <p class="text-gray-600">AP1 2020</p>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
 
-                                    <!-- MBA ESSONE Steeve -->
-                                    <div class="student-card flex-shrink-0 w-64">
-                                        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                                            <div class="student-info-overlay">
-                                                <h4 class="text-lg font-medium">MBA ESSONE Steeve</h4>
-                                                <p>Sexe: M</p>
-                                                <p>Téléphone: +241 077 30 71 93</p>
-                                                <p>Parcours: ING</p>
-                                                <p>Promotion: 2020</p>
-                                            </div>
-                                            <img src="assets/images/image/user.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
-                                            <div class="p-4">
-                                                <h4 class="text-lg font-medium text-gray-900">MBA ESSONE Steeve</h4>
-                                                <p class="text-gray-600">AP1 2020</p>
+                                        <!-- Mademoiselle BARESSY Samuelle Jamila -->
+                                        <div class="student-card flex-shrink-0 w-64">
+                                            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                                <div class="student-info-overlay">
+                                                    <h4 class="text-lg font-medium">BARESSY Samuelle Jamila</h4>
+                                                    <p>Sexe: F</p>
+                                                    <p>Téléphone: </p>
+                                                    <p>Parcours: AP</p>
+                                                    <p>Promotion: 2020</p>
+                                                </div>
+                                                <img src="assets/images/image/user.jpg" alt="Étudiante" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                                <div class="p-4">
+                                                    <h4 class="text-lg font-medium text-gray-900">BARESSY Samuelle Jamila</h4>
+                                                    <p class="text-gray-600">AP1 2020</p>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
 
-                                    <!-- MBOULA-MISOUNGA Harley-Rodney -->
-                                    <div class="student-card flex-shrink-0 w-64">
-                                        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                                            <div class="student-info-overlay">
-                                                <h4 class="text-lg font-medium">MBOULA-MISOUNGA Harley-Rodney</h4>
-                                                <p>Sexe: M</p>
-                                                <p>Téléphone: +241 077 30 71 93</p>
-                                                <p>Parcours: ING</p>
-                                                <p>Promotion: 2020</p>
-                                            </div>
-                                            <img src="assets/images/image/user.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
-                                            <div class="p-4">
-                                                <h4 class="text-lg font-medium text-gray-900">MBOULA-MISOUNGA Harley-Rodney</h4>
-                                                <p class="text-gray-600">AP1 2020</p>
+                                        <!-- Mademoiselle BEBANE MOUKOUMBI Marina Brunelle -->
+                                        <div class="student-card flex-shrink-0 w-64">
+                                            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                                <div class="student-info-overlay">
+                                                    <h4 class="text-lg font-medium">BEBANE MOUKOUMBI Marina Brunelle</h4>
+                                                    <p>Sexe: F</p>
+                                                    <p>Téléphone: </p>
+                                                    <p>Parcours: AP</p>
+                                                    <p>Promotion: 2020</p>
+                                                </div>
+                                                <img src="assets/images/image/user.jpg" alt="Étudiante" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                                <div class="p-4">
+                                                    <h4 class="text-lg font-medium text-gray-900">BEBANE MOUKOUMBI Marina Brunelle</h4>
+                                                    <p class="text-gray-600">AP1 2020</p>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
 
-                                    <!-- MIHINDOU TCHIAMA Glen Brenne -->
-                                    <div class="student-card flex-shrink-0 w-64">
-                                        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                                            <div class="student-info-overlay">
-                                                <h4 class="text-lg font-medium">MIHINDOU TCHIAMA Glen Brenne</h4>
-                                                <p>Sexe: M</p>
-                                                <p>Téléphone: +241 077 30 71 93</p>
-                                                <p>Parcours: ING</p>
-                                                <p>Promotion: 2020</p>
-                                            </div>
-                                            <img src="assets/images/image/glen.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
-                                            <div class="p-4">
-                                                <h4 class="text-lg font-medium text-gray-900">MIHINDOU TCHIAMA Glen Brenne</h4>
-                                                <p class="text-gray-600">AP1 2020</p>
+                                        <!-- Monsieur BOUDET John Zaen's King's Lamours -->
+                                        <div class="student-card flex-shrink-0 w-64">
+                                            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                                <div class="student-info-overlay">
+                                                    <h4 class="text-lg font-medium">BOUDET John Zaen's King's Lamours</h4>
+                                                    <p>Sexe: M</p>
+                                                    <p>Téléphone: </p>
+                                                    <p>Parcours: AP</p>
+                                                    <p>Promotion: 2020</p>
+                                                </div>
+                                                <img src="assets/images/image/user.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                                <div class="p-4">
+                                                    <h4 class="text-lg font-medium text-gray-900">BOUDET John Zaen's King's Lamours</h4>
+                                                    <p class="text-gray-600">AP1 2020</p>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
 
-                                    <!-- MONGO LOUMBA Seldor -->
-                                    <div class="student-card flex-shrink-0 w-64">
-                                        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                                            <div class="student-info-overlay">
-                                                <h4 class="text-lg font-medium">MONGO LOUMBA Seldor</h4>
-                                                <p>Sexe: M</p>
-                                                <p>Téléphone: +241 077 30 71 93</p>
-                                                <p>Parcours: ING</p>
-                                                <p>Promotion: 2020</p>
-                                            </div>
-                                            <img src="assets/images/image/user.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
-                                            <div class="p-4">
-                                                <h4 class="text-lg font-medium text-gray-900">MONGO LOUMBA Seldor</h4>
-                                                <p class="text-gray-600">AP1 2020</p>
+                                        <!-- Monsieur ESSONE-OBIANG Alfran-Emmanuel -->
+                                        <div class="student-card flex-shrink-0 w-64">
+                                            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                                <div class="student-info-overlay">
+                                                    <h4 class="text-lg font-medium">ESSONE-OBIANG Alfran-Emmanuel</h4>
+                                                    <p>Sexe: M</p>
+                                                    <p>Téléphone: </p>
+                                                    <p>Parcours: AP</p>
+                                                    <p>Promotion: 2020</p>
+                                                </div>
+                                                <img src="assets/images/image/user.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                                <div class="p-4">
+                                                    <h4 class="text-lg font-medium text-gray-900">ESSONE-OBIANG Alfran-Emmanuel</h4>
+                                                    <p class="text-gray-600">AP1 2020</p>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
 
-                                    <!-- OKONGO Gildas Perrin -->
-                                    <div class="student-card flex-shrink-0 w-64">
-                                        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                                            <div class="student-info-overlay">
-                                                <h4 class="text-lg font-medium">OKONGO Gildas Perrin</h4>
-                                                <p>Sexe: M</p>
-                                                <p>Téléphone: +241 077 30 71 93</p>
-                                                <p>Parcours: ING</p>
-                                                <p>Promotion: 2020</p>
-                                            </div>
-                                            <img src="assets/images/image/user.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
-                                            <div class="p-4">
-                                                <h4 class="text-lg font-medium text-gray-900">OKONGO Gildas Perrin</h4>
-                                                <p class="text-gray-600">AP1 2020</p>
+                                        <!-- Monsieur FOTSI TAKAM Harel Franck -->
+                                        <div class="student-card flex-shrink-0 w-64">
+                                            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                                <div class="student-info-overlay">
+                                                    <h4 class="text-lg font-medium">FOTSI TAKAM Harel Franck</h4>
+                                                    <p>Sexe: M</p>
+                                                    <p>Téléphone: </p>
+                                                    <p>Parcours: AP</p>
+                                                    <p>Promotion: 2020</p>
+                                                </div>
+                                                <img src="assets/images/image/user.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                                <div class="p-4">
+                                                    <h4 class="text-lg font-medium text-gray-900">FOTSI TAKAM Harel Franck</h4>
+                                                    <p class="text-gray-600">AP1 2020</p>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
 
-                                    <!-- MBAIWODJI Bienvenue -->
-                                    <div class="student-card flex-shrink-0 w-64">
-                                        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                                            <div class="student-info-overlay">
-                                                <h4 class="text-lg font-medium">MBAIWODJI Bienvenue</h4>
-                                                <p>Sexe: M</p>
-                                                <p>Téléphone: +241 077 30 71 93</p>
-                                                <p>Parcours: ING</p>
-                                                <p>Promotion: 2020</p>
-                                            </div>
-                                            <img src="assets/images/image/user.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
-                                            <div class="p-4">
-                                                <h4 class="text-lg font-medium text-gray-900">MBAIWODJI Bienvenue</h4>
-                                                <p class="text-gray-600">AP1 2020</p>
+                                        <!-- Monsieur GUIBINGA-MANGOUKA Raph -->
+                                        <div class="student-card flex-shrink-0 w-64">
+                                            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                                <div class="student-info-overlay">
+                                                    <h4 class="text-lg font-medium">GUIBINGA-MANGOUKA Raph</h4>
+                                                    <p>Sexe: M</p>
+                                                    <p>Téléphone: </p>
+                                                    <p>Parcours: AP</p>
+                                                    <p>Promotion: 2020</p>
+                                                </div>
+                                                <img src="assets/images/image/user.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                                <div class="p-4">
+                                                    <h4 class="text-lg font-medium text-gray-900">GUIBINGA-MANGOUKA Raph</h4>
+                                                    <p class="text-gray-600">AP1 2020</p>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
 
-                                    <!-- MAHAMOUD Boloki Hassaballah -->
-                                    <div class="student-card flex-shrink-0 w-64">
-                                        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                                            <div class="student-info-overlay">
-                                                <h4 class="text-lg font-medium">MAHAMOUD Boloki Hassaballah</h4>
-                                                <p>Sexe: M</p>
-                                                <p>Téléphone: +241 077 30 71 93</p>
-                                                <p>Parcours: ING</p>
-                                                <p>Promotion: 2020</p>
-                                            </div>
-                                            <img src="assets/images/image/user.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
-                                            <div class="p-4">
-                                                <h4 class="text-lg font-medium text-gray-900">MAHAMOUD Boloki Hassaballah</h4>
-                                                <p class="text-gray-600">AP1 2020</p>
+                                        <!-- Monsieur KOUHOUINIKINA Laurion Dareich -->
+                                        <div class="student-card flex-shrink-0 w-64">
+                                            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                                <div class="student-info-overlay">
+                                                    <h4 class="text-lg font-medium">KOUHOUINIKINA Laurion Dareich</h4>
+                                                    <p>Sexe: M</p>
+                                                    <p>Téléphone: </p>
+                                                    <p>Parcours: AP</p>
+                                                    <p>Promotion: 2020</p>
+                                                </div>
+                                                <img src="assets/images/image/user.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                                <div class="p-4">
+                                                    <h4 class="text-lg font-medium text-gray-900">KOUHOUINIKINA Laurion Dareich</h4>
+                                                    <p class="text-gray-600">AP1 2020</p>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
 
-                                    <!-- ALLADOUM NDOUBA Espérance -->
-                                    <div class="student-card flex-shrink-0 w-64">
-                                        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                                            <div class="student-info-overlay">
-                                                <h4 class="text-lg font-medium">ALLADOUM NDOUBA Espérance</h4>
-                                                <p>Sexe: M</p>
-                                                <p>Téléphone: +241 077 30 71 93</p>
-                                                <p>Parcours: ING</p>
-                                                <p>Promotion: 2020</p>
-                                            </div>
-                                            <img src="assets/images/image/user.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
-                                            <div class="p-4">
-                                                <h4 class="text-lg font-medium text-gray-900">ALLADOUM NDOUBA Espérance</h4>
-                                                <p class="text-gray-600">AP1 2020</p>
+                                        <!-- Monsieur LEMBIONGO IBOUANA Glen -->
+                                        <div class="student-card flex-shrink-0 w-64">
+                                            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                                <div class="student-info-overlay">
+                                                    <h4 class="text-lg font-medium">LEMBIONGO IBOUANA Glen</h4>
+                                                    <p>Sexe: M</p>
+                                                    <p>Téléphone: </p>
+                                                    <p>Parcours: AP</p>
+                                                    <p>Promotion: 2020</p>
+                                                </div>
+                                                <img src="assets/images/image/user.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                                <div class="p-4">
+                                                    <h4 class="text-lg font-medium text-gray-900">LEMBIONGO IBOUANA Glen</h4>
+                                                    <p class="text-gray-600">AP1 2020</p>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
 
-                                    <!-- DOUDJE ABDALLAH Michael -->
-                                    <div class="student-card flex-shrink-0 w-64">
-                                        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                                            <div class="student-info-overlay">
-                                                <h4 class="text-lg font-medium">DOUDJE ABDALLAH Michael</h4>
-                                                <p>Sexe: M</p>
-                                                <p>Téléphone: +241 077 30 71 93</p>
-                                                <p>Parcours: ING</p>
-                                                <p>Promotion: 2020</p>
-                                            </div>
-                                            <img src="assets/images/image/user.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
-                                            <div class="p-4">
-                                                <h4 class="text-lg font-medium text-gray-900">DOUDJE ABDALLAH Michael</h4>
-                                                <p class="text-gray-600">AP1 2020</p>
+                                        <!-- Monsieur LEMBOMAH Georges Junior -->
+                                        <div class="student-card flex-shrink-0 w-64">
+                                            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                                <div class="student-info-overlay">
+                                                    <h4 class="text-lg font-medium">LEMBOMAH Georges Junior</h4>
+                                                    <p>Sexe: M</p>
+                                                    <p>Téléphone: </p>
+                                                    <p>Parcours: AP</p>
+                                                    <p>Promotion: 2020</p>
+                                                </div>
+                                                <img src="assets/images/image/user.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                                <div class="p-4">
+                                                    <h4 class="text-lg font-medium text-gray-900">LEMBOMAH Georges Junior</h4>
+                                                    <p class="text-gray-600">AP1 2020</p>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
 
-                                    <!-- BABISSA Harlin Chancel -->
-                                    <div class="student-card flex-shrink-0 w-64">
-                                        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                                            <div class="student-info-overlay">
-                                                <h4 class="text-lg font-medium">BABISSA Harlin Chancel</h4>
-                                                <p>Sexe: M</p>
-                                                <p>Téléphone: +241 077 30 71 93</p>
-                                                <p>Parcours: ING</p>
-                                                <p>Promotion: 2020</p>
-                                            </div>
-                                            <img src="assets/images/image/user.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
-                                            <div class="p-4">
-                                                <h4 class="text-lg font-medium text-gray-900">BABISSA Harlin Chancel</h4>
-                                                <p class="text-gray-600">AP1 2020</p>
+                                        <!-- Mademoiselle MADINGA Flannie Nelle -->
+                                        <div class="student-card flex-shrink-0 w-64">
+                                            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                                <div class="student-info-overlay">
+                                                    <h4 class="text-lg font-medium">MADINGA Flannie Nelle</h4>
+                                                    <p>Sexe: F</p>
+                                                    <p>Téléphone: </p>
+                                                    <p>Parcours: AP</p>
+                                                    <p>Promotion: 2020</p>
+                                                </div>
+                                                <img src="assets/images/image/user.jpg" alt="Étudiante" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                                <div class="p-4">
+                                                    <h4 class="text-lg font-medium text-gray-900">MADINGA Flannie Nelle</h4>
+                                                    <p class="text-gray-600">AP1 2020</p>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
 
-                                    <!-- HALAMIA BOUKAR Roland -->
-                                    <div class="student-card flex-shrink-0 w-64">
-                                        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                                            <div class="student-info-overlay">
-                                                <h4 class="text-lg font-medium">HALAMIA BOUKAR Roland</h4>
-                                                <p>Sexe: M</p>
-                                                <p>Téléphone: +241 077 30 71 93</p>
-                                                <p>Parcours: ING</p>
-                                                <p>Promotion: 2020</p>
-                                            </div>
-                                            <img src="assets/images/image/user.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
-                                            <div class="p-4">
-                                                <h4 class="text-lg font-medium text-gray-900">HALAMIA BOUKAR Roland</h4>
-                                                <p class="text-gray-600">AP1 2020</p>
+                                        <!-- Mademoiselle MANGUITUKULU-MUSAHU Grâce Kétsia Jédidah -->
+                                        <div class="student-card flex-shrink-0 w-64">
+                                            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                                <div class="student-info-overlay">
+                                                    <h4 class="text-lg font-medium">MANGUITUKULU-MUSAHU Grâce Kétsia Jédidah</h4>
+                                                    <p>Sexe: F</p>
+                                                    <p>Téléphone: </p>
+                                                    <p>Parcours: AP</p>
+                                                    <p>Promotion: 2020</p>
+                                                </div>
+                                                <img src="assets/images/image/user.jpg" alt="Étudiante" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                                <div class="p-4">
+                                                    <h4 class="text-lg font-medium text-gray-900">MANGUITUKULU-MUSAHU Grâce Kétsia Jédidah</h4>
+                                                    <p class="text-gray-600">AP1 2020</p>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
 
-                                    <!-- TEPE Anicet -->
-                                    <div class="student-card flex-shrink-0 w-64">
-                                        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                                            <div class="student-info-overlay">
-                                                <h4 class="text-lg font-medium">TEPE Anicet</h4>
-                                                <p>Sexe: M</p>
-                                                <p>Téléphone: +241 077 30 71 93</p>
-                                                <p>Parcours: ING</p>
-                                                <p>Promotion: 2020</p>
-                                            </div>
-                                            <img src="assets/images/image/user.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
-                                            <div class="p-4">
-                                                <h4 class="text-lg font-medium text-gray-900">TEPE Anicet</h4>
-                                                <p class="text-gray-600">AP1 2020</p>
+                                        <!-- Monsieur MBA NDONG Jean-Baptiste -->
+                                        <div class="student-card flex-shrink-0 w-64">
+                                            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                                <div class="student-info-overlay">
+                                                    <h4 class="text-lg font-medium">MBA NDONG Jean-Baptiste</h4>
+                                                    <p>Sexe: M</p>
+                                                    <p>Téléphone: </p>
+                                                    <p>Parcours: AP</p>
+                                                    <p>Promotion: 2020</p>
+                                                </div>
+                                                <img src="assets/images/image/user.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                                <div class="p-4">
+                                                    <h4 class="text-lg font-medium text-gray-900">MBA NDONG Jean-Baptiste</h4>
+                                                    <p class="text-gray-600">AP1 2020</p>
+                                                </div>
                                             </div>
                                         </div>
-                                </div>
+
+                                        <!-- Monsieur MBOCANI EPALIA Francis Alberto -->
+                                        <div class="student-card flex-shrink-0 w-64">
+                                            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                                <div class="student-info-overlay">
+                                                    <h4 class="text-lg font-medium">MBOCANI EPALIA Francis Alberto</h4>
+                                                    <p>Sexe: M</p>
+                                                    <p>Téléphone: </p>
+                                                    <p>Parcours: AP</p>
+                                                    <p>Promotion: 2020</p>
+                                                </div>
+                                                <img src="assets/images/image/user.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                                <div class="p-4">
+                                                    <h4 class="text-lg font-medium text-gray-900">MBOCANI EPALIA Francis Alberto</h4>
+                                                    <p class="text-gray-600">AP1 2020</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Monsieur MBOYI Bienfait -->
+                                        <div class="student-card flex-shrink-0 w-64">
+                                            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                                <div class="student-info-overlay">
+                                                    <h4 class="text-lg font-medium">MBOYI Bienfait</h4>
+                                                    <p>Sexe: M</p>
+                                                    <p>Téléphone: </p>
+                                                    <p>Parcours: AP</p>
+                                                    <p>Promotion: 2020</p>
+                                                </div>
+                                                <img src="assets/images/image/user.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                                <div class="p-4">
+                                                    <h4 class="text-lg font-medium text-gray-900">MBOYI Bienfait</h4>
+                                                    <p class="text-gray-600">AP1 2020</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Mademoiselle MENGHE EDJO Régina Sharone -->
+                                        <div class="student-card flex-shrink-0 w-64">
+                                            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                                <div class="student-info-overlay">
+                                                    <h4 class="text-lg font-medium">MENGHE EDJO Régina Sharone</h4>
+                                                    <p>Sexe: F</p>
+                                                    <p>Téléphone: </p>
+                                                    <p>Parcours: AP</p>
+                                                    <p>Promotion: 2020</p>
+                                                </div>
+                                                <img src="assets/images/image/user.jpg" alt="Étudiante" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                                <div class="p-4">
+                                                    <h4 class="text-lg font-medium text-gray-900">MENGHE EDJO Régina Sharone</h4>
+                                                    <p class="text-gray-600">AP1 2020</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Monsieur MIHINDOU-MBOUM Constant Alexis -->
+                                        <div class="student-card flex-shrink-0 w-64">
+                                            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                                <div class="student-info-overlay">
+                                                    <h4 class="text-lg font-medium">MIHINDOU-MBOUM Constant Alexis</h4>
+                                                    <p>Sexe: M</p>
+                                                    <p>Téléphone: </p>
+                                                    <p>Parcours: AP</p>
+                                                    <p>Promotion: 2020</p>
+                                                </div>
+                                                <img src="assets/images/image/user.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                                <div class="p-4">
+                                                    <h4 class="text-lg font-medium text-gray-900">MIHINDOU-MBOUM Constant Alexis</h4>
+                                                    <p class="text-gray-600">AP1 2020</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Monsieur MISSENGUET BOUKAMBA Botrel-Cabrel -->
+                                        <div class="student-card flex-shrink-0 w-64">
+                                            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                                <div class="student-info-overlay">
+                                                    <h4 class="text-lg font-medium">MISSENGUET BOUKAMBA Botrel-Cabrel</h4>
+                                                    <p>Sexe: M</p>
+                                                    <p>Téléphone: </p>
+                                                    <p>Parcours: AP</p>
+                                                    <p>Promotion: 2020</p>
+                                                </div>
+                                                <img src="assets/images/image/user.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                                <div class="p-4">
+                                                    <h4 class="text-lg font-medium text-gray-900">MISSENGUET BOUKAMBA Botrel-Cabrel</h4>
+                                                    <p class="text-gray-600">AP1 2020</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Monsieur MOUKANA Patience Marel -->
+                                        <div class="student-card flex-shrink-0 w-64">
+                                            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                                <div class="student-info-overlay">
+                                                    <h4 class="text-lg font-medium">MOUKANA Patience Marel</h4>
+                                                    <p>Sexe: M</p>
+                                                    <p>Téléphone: </p>
+                                                    <p>Parcours: AP</p>
+                                                    <p>Promotion: 2020</p>
+                                                </div>
+                                                <img src="assets/images/image/user.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                                <div class="p-4">
+                                                    <h4 class="text-lg font-medium text-gray-900">MOUKANA Patience Marel</h4>
+                                                    <p class="text-gray-600">AP1 2020</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Monsieur MOUNANGA MADOUMA Guy Manfreid -->
+                                        <div class="student-card flex-shrink-0 w-64">
+                                            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                                <div class="student-info-overlay">
+                                                    <h4 class="text-lg font-medium">MOUNANGA MADOUMA Guy Manfreid</h4>
+                                                    <p>Sexe: M</p>
+                                                    <p>Téléphone: </p>
+                                                    <p>Parcours: AP</p>
+                                                    <p>Promotion: 2020</p>
+                                                </div>
+                                                <img src="assets/images/image/user.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                                <div class="p-4">
+                                                    <h4 class="text-lg font-medium text-gray-900">MOUNANGA MADOUMA Guy Manfreid</h4>
+                                                    <p class="text-gray-600">AP1 2020</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Mademoiselle MOUSSAVOU OGANDAGA Arnellas Merlikas -->
+                                        <div class="student-card flex-shrink-0 w-64">
+                                            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                                <div class="student-info-overlay">
+                                                    <h4 class="text-lg font-medium">MOUSSAVOU OGANDAGA Arnellas Merlikas</h4>
+                                                    <p>Sexe: F</p>
+                                                    <p>Téléphone: </p>
+                                                    <p>Parcours: AP</p>
+                                                    <p>Promotion: 2020</p>
+                                                </div>
+                                                <img src="assets/images/image/user.jpg" alt="Étudiante" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                                <div class="p-4">
+                                                    <h4 class="text-lg font-medium text-gray-900">MOUSSAVOU OGANDAGA Arnellas Merlikas</h4>
+                                                    <p class="text-gray-600">AP1 2020</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Monsieur MPAMBOU-MOUKAGNI Wadrice Staeel -->
+                                        <div class="student-card flex-shrink-0 w-64">
+                                            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                                <div class="student-info-overlay">
+                                                    <h4 class="text-lg font-medium">MPAMBOU-MOUKAGNI Wadrice Staeel</h4>
+                                                    <p>Sexe: M</p>
+                                                    <p>Téléphone: </p>
+                                                    <p>Parcours: AP</p>
+                                                    <p>Promotion: 2020</p>
+                                                </div>
+                                                <img src="assets/images/image/user.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                                <div class="p-4">
+                                                    <h4 class="text-lg font-medium text-gray-900">MPAMBOU-MOUKAGNI Wadrice Staeel</h4>
+                                                    <p class="text-gray-600">AP1 2020</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Monsieur NANG KOUMBA ASSOGBA Erwine Davlyn -->
+                                        <div class="student-card flex-shrink-0 w-64">
+                                            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                                <div class="student-info-overlay">
+                                                    <h4 class="text-lg font-medium">NANG KOUMBA ASSOGBA Erwine Davlyn</h4>
+                                                    <p>Sexe: M</p>
+                                                    <p>Téléphone: </p>
+                                                    <p>Parcours: AP</p>
+                                                    <p>Promotion: 2020</p>
+                                                </div>
+                                                <img src="assets/images/image/user.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                                <div class="p-4">
+                                                    <h4 class="text-lg font-medium text-gray-900">NANG KOUMBA ASSOGBA Erwine Davlyn</h4>
+                                                    <p class="text-gray-600">AP1 2020</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Mademoiselle NDZIBOU LIKALA Winny Danelva -->
+                                        <div class="student-card flex-shrink-0 w-64">
+                                            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                                <div class="student-info-overlay">
+                                                    <h4 class="text-lg font-medium">NDZIBOU LIKALA Winny Danelva</h4>
+                                                    <p>Sexe: F</p>
+                                                    <p>Téléphone: </p>
+                                                    <p>Parcours: AP</p>
+                                                    <p>Promotion: 2020</p>
+                                                </div>
+                                                <img src="assets/images/image/user.jpg" alt="Étudiante" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                                <div class="p-4">
+                                                    <h4 class="text-lg font-medium text-gray-900">NDZIBOU LIKALA Winny Danelva</h4>
+                                                    <p class="text-gray-600">AP1 2020</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Monsieur NZAMBA ATOUHOU Fharel Waren -->
+                                        <div class="student-card flex-shrink-0 w-64">
+                                            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                                <div class="student-info-overlay">
+                                                    <h4 class="text-lg font-medium">NZAMBA ATOUHOU Fharel Waren</h4>
+                                                    <p>Sexe: M</p>
+                                                    <p>Téléphone: </p>
+                                                    <p>Parcours: AP</p>
+                                                    <p>Promotion: 2020</p>
+                                                </div>
+                                                <img src="assets/images/image/user.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                                <div class="p-4">
+                                                    <h4 class="text-lg font-medium text-gray-900">NZAMBA ATOUHOU Fharel Waren</h4>
+                                                    <p class="text-gray-600">AP1 2020</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Monsieur NZIENGUI NZIENGUI Lenny Clay -->
+                                        <div class="student-card flex-shrink-0 w-64">
+                                            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                                <div class="student-info-overlay">
+                                                    <h4 class="text-lg font-medium">NZIENGUI NZIENGUI Lenny Clay</h4>
+                                                    <p>Sexe: M</p>
+                                                    <p>Téléphone: </p>
+                                                    <p>Parcours: AP</p>
+                                                    <p>Promotion: 2020</p>
+                                                </div>
+                                                <img src="assets/images/image/user.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                                <div class="p-4">
+                                                    <h4 class="text-lg font-medium text-gray-900">NZIENGUI NZIENGUI Lenny Clay</h4>
+                                                    <p class="text-gray-600">AP1 2020</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Mademoiselle NZOGHE ASSENGONE Yolande -->
+                                        <div class="student-card flex-shrink-0 w-64">
+                                            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                                <div class="student-info-overlay">
+                                                    <h4 class="text-lg font-medium">NZOGHE ASSENGONE Yolande</h4>
+                                                    <p>Sexe: F</p>
+                                                    <p>Téléphone: </p>
+                                                    <p>Parcours: AP</p>
+                                                    <p>Promotion: 2020</p>
+                                                </div>
+                                                <img src="assets/images/image/user.jpg" alt="Étudiante" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                                <div class="p-4">
+                                                    <h4 class="text-lg font-medium text-gray-900">NZOGHE ASSENGONE Yolande</h4>
+                                                    <p class="text-gray-600">AP1 2020</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Monsieur OKE EDOU Rodney Yvan Jordy -->
+                                        <div class="student-card flex-shrink-0 w-64">
+                                            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                                <div class="student-info-overlay">
+                                                    <h4 class="text-lg font-medium">OKE EDOU Rodney Yvan Jordy</h4>
+                                                    <p>Sexe: M</p>
+                                                    <p>Téléphone: </p>
+                                                    <p>Parcours: AP</p>
+                                                    <p>Promotion: 2020</p>
+                                                </div>
+                                                <img src="assets/images/image/user.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                                <div class="p-4">
+                                                    <h4 class="text-lg font-medium text-gray-900">OKE EDOU Rodney Yvan Jordy</h4>
+                                                    <p class="text-gray-600">AP1 2020</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Monsieur OWONE DOKONOU KODJO Delly-Christopher -->
+                                        <div class="student-card flex-shrink-0 w-64">
+                                            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                                <div class="student-info-overlay">
+                                                    <h4 class="text-lg font-medium">OWONE DOKONOU KODJO Delly-Christopher</h4>
+                                                    <p>Sexe: M</p>
+                                                    <p>Téléphone: </p>
+                                                    <p>Parcours: AP</p>
+                                                    <p>Promotion: 2020</p>
+                                                </div>
+                                                <img src="assets/images/image/user.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                                <div class="p-4">
+                                                    <h4 class="text-lg font-medium text-gray-900">OWONE DOKONOU KODJO Delly-Christopher</h4>
+                                                    <p class="text-gray-600">AP1 2020</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Mademoiselle TSENE TABENGO Marilyne Délia Alida -->
+                                        <div class="student-card flex-shrink-0 w-64">
+                                            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                                <div class="student-info-overlay">
+                                                    <h4 class="text-lg font-medium">TSENE TABENGO Marilyne Délia Alida</h4>
+                                                    <p>Sexe: F</p>
+                                                    <p>Téléphone: </p>
+                                                    <p>Parcours: AP</p>
+                                                    <p>Promotion: 2020</p>
+                                                </div>
+                                                <img src="assets/images/image/user.jpg" alt="Étudiante" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                                <div class="p-4">
+                                                    <h4 class="text-lg font-medium text-gray-900">TSENE TABENGO Marilyne Délia Alida</h4>
+                                                    <p class="text-gray-600">AP1 2020</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Monsieur ZENG KOUEREY Doguy Brahane -->
+                                        <div class="student-card flex-shrink-0 w-64">
+                                            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                                <div class="student-info-overlay">
+                                                    <h4 class="text-lg font-medium">ZENG KOUEREY Doguy Brahane</h4>
+                                                    <p>Sexe: M</p>
+                                                    <p>Téléphone: </p>
+                                                    <p>Parcours: AP</p>
+                                                    <p>Promotion: 2020</p>
+                                                </div>
+                                                <img src="assets/images/image/user.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                                <div class="p-4">
+                                                    <h4 class="text-lg font-medium text-gray-900">ZENG KOUEREY Doguy Brahane</h4>
+                                                    <p class="text-gray-600">AP1 2020</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    
                             </div>
                         </div>
                     </div>
-                </details>
+                </details></div>
                 <!--Fin 2020-->
-
-                <details id="aplp-2020" class="mb-6 border border-blue-200 rounded-md p-4 bg-white">
+                <div class="flex flex-wrap ">
+                <details id="aplp-2021" class="mb-6 border border-blue-200 rounded-md p-4 bg-white max-w-full">
                     <summary class="cursor-pointer text-blue-600 font-semibold text-lg">
                         2021
                     </summary>
@@ -370,211 +695,506 @@
                     <div class="carousel-container">
                                 <div class="carousel-track animate-scroll">
                                     <!-- Premier groupe de cartes -->
+                                    <!-- Monsieur GUIBINGA-MANGOUKA Raph -->
                                     <div class="student-card flex-shrink-0 w-64">
                                         <div class="bg-white rounded-lg shadow-lg overflow-hidden">
                                             <div class="student-info-overlay">
-                                                <h4 class="text-lg font-medium">BOUSSOUGOU</h4>
+                                                <h4 class="text-lg font-medium">GUIBINGA-MANGOUKA Raph</h4>
                                                 <p>Sexe: M</p>
-                                                <p>Téléphone: +241 062 66 76 33</p>
+                                                <p>Téléphone: </p>
+                                                <p>Parcours: AP</p>
+                                                <p>Promotion: 2021</p>
+                                            </div>
+                                            <img src="assets/images/AP-LP/2020/PABLO.jpeg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                            <div class="p-4">
+                                                <h4 class="text-lg font-medium text-gray-900">GUIBINGA-MANGOUKA Raph</h4>
+                                                <p class="text-gray-600">AP1 2021</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Mademoiselle MADINGA Flannie Nelle -->
+                                    <div class="student-card flex-shrink-0 w-64">
+                                        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                            <div class="student-info-overlay">
+                                                <h4 class="text-lg font-medium">MADINGA Flannie Nelle</h4>
+                                                <p>Sexe: F</p>
+                                                <p>Téléphone: </p>
+                                                <p>Parcours: AP</p>
+                                                <p>Promotion: 2021</p>
+                                            </div>
+                                            <img src="assets/images/image/user.jpg" alt="Étudiante" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                            <div class="p-4">
+                                                <h4 class="text-lg font-medium text-gray-900">MADINGA Flannie Nelle</h4>
+                                                <p class="text-gray-600">AP1 2021</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Monsieur NZAMBA ATOUHOU Fharel Waren -->
+                                    <div class="student-card flex-shrink-0 w-64">
+                                        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                            <div class="student-info-overlay">
+                                                <h4 class="text-lg font-medium">NZAMBA ATOUHOU Fharel Waren</h4>
+                                                <p>Sexe: M</p>
+                                                <p>Téléphone: </p>
+                                                <p>Parcours: AP</p>
+                                                <p>Promotion: 2021</p>
+                                            </div>
+                                            <img src="assets/images/image/user.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                            <div class="p-4">
+                                                <h4 class="text-lg font-medium text-gray-900">NZAMBA ATOUHOU Fharel Waren</h4>
+                                                <p class="text-gray-600">AP1 2021</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Monsieur BOUSSOUGOU KIZHOGO Yoland -->
+                                    <div class="student-card flex-shrink-0 w-64">
+                                        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                            <div class="student-info-overlay">
+                                                <h4 class="text-lg font-medium">BOUSSOUGOU KIZHOGO Yoland</h4>
+                                                <p>Sexe: M</p>
+                                                <p>Téléphone: </p>
                                                 <p>Parcours: AP</p>
                                                 <p>Promotion: 2021</p>
                                             </div>
                                             <img src="assets/images/AP-LP/2021/BOUSSOUGOU.jpeg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
                                             <div class="p-4">
-                                                <h4 class="text-lg font-medium text-gray-900">BOUSSOUGOU</h4>
+                                                <h4 class="text-lg font-medium text-gray-900">BOUSSOUGOU KIZHOGO Yoland</h4>
                                                 <p class="text-gray-600">AP1 2021</p>
                                             </div>
                                         </div>
                                     </div>
+
+                                    <!-- Monsieur ABOULI Alphoncia Gloire -->
                                     <div class="student-card flex-shrink-0 w-64">
                                         <div class="bg-white rounded-lg shadow-lg overflow-hidden">
                                             <div class="student-info-overlay">
-                                                <h4 class="text-lg font-medium">ANGUE JENNIFER</h4>
-                                                <p>Sexe: F</p>
-                                                <p>Téléphone: +241 077 90 75 59</p>
-                                                <p>Parcours: MIAGE</p>
+                                                <h4 class="text-lg font-medium">ABOULI Alphoncia Gloire</h4>
+                                                <p>Sexe: M</p>
+                                                <p>Téléphone: </p>
+                                                <p>Parcours: AP</p>
                                                 <p>Promotion: 2021</p>
                                             </div>
-                                            <img src="assets/images/AP-LP/2021/ANGUE_JENNIFER.jpeg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                            <img src="assets/images/image/user.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
                                             <div class="p-4">
-                                                <h4 class="text-lg font-medium text-gray-900">ANGUE JENNIFER</h4>
+                                                <h4 class="text-lg font-medium text-gray-900">ABOULI Alphoncia Gloire</h4>
                                                 <p class="text-gray-600">AP1 2021</p>
                                             </div>
                                         </div>
                                     </div>
+
+                                    <!-- Mademoiselle OKO'O-EKOMO Stélia Eunice -->
                                     <div class="student-card flex-shrink-0 w-64">
                                         <div class="bg-white rounded-lg shadow-lg overflow-hidden">
                                             <div class="student-info-overlay">
-                                                <h4 class="text-lg font-medium">BAMBO LEBONHEUR</h4>
-                                                <p>Sexe: M</p>
-                                                <p>Téléphone: +241 066 03 71 16</p>
-                                                <p>Parcours: AP</p>
-                                                <p>Promotion: 2021</p>
-                                            </div>
-                                            <img src="assets/images/AP-LP/2021/Bonheur.jpeg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
-                                            <div class="p-4">
-                                                <h4 class="text-lg font-medium text-gray-900">BAMBO LEBONHEUR</h4>
-                                                 <p class="text-gray-600">AP1 2021</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="student-card flex-shrink-0 w-64">
-                                        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                                            <div class="student-info-overlay">
-                                                <h4 class="text-lg font-medium">OKO EUNICE</h4>
+                                                <h4 class="text-lg font-medium">OKO'O-EKOMO Stélia Eunice</h4>
                                                 <p>Sexe: F</p>
-                                                <p>Téléphone: +241 062 73 67 84</p>
+                                                <p>Téléphone: </p>
                                                 <p>Parcours: AP</p>
                                                 <p>Promotion: 2021</p>
                                             </div>
-                                            <img src="assets/images/AP-LP/2021/EUNICE.jpeg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                            <img src="assets/images/AP-LP/2021/EUNICE.jpeg" alt="Étudiante" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
                                             <div class="p-4">
-                                                <h4 class="text-lg font-medium text-gray-900">OKO EUNICE</h4>
-                                                 <p class="text-gray-600">AP1 2021</p>
+                                                <h4 class="text-lg font-medium text-gray-900">OKO'O-EKOMO Stélia Eunice</h4>
+                                                <p class="text-gray-600">AP1 2021</p>
                                             </div>
                                         </div>
                                     </div>
+
+                                    <!-- Monsieur MOMBO Jared Remaliah -->
                                     <div class="student-card flex-shrink-0 w-64">
                                         <div class="bg-white rounded-lg shadow-lg overflow-hidden">
                                             <div class="student-info-overlay">
-                                                <h4 class="text-lg font-medium">ABEGUE</h4>
+                                                <h4 class="text-lg font-medium">MOMBO Jared Remaliah</h4>
                                                 <p>Sexe: M</p>
-                                                <p>Téléphone: +241 XX XX XX XX</p>
+                                                <p>Téléphone: </p>
                                                 <p>Parcours: AP</p>
                                                 <p>Promotion: 2021</p>
                                             </div>
-                                            <img src="assets/images/AP-LP/2021/ABEGUE.jpeg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                            <img src="assets/images/image/user.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
                                             <div class="p-4">
-                                                <h4 class="text-lg font-medium text-gray-900">ABEGUE</h4>
-                                                 <p class="text-gray-600">AP1 2021</p>
+                                                <h4 class="text-lg font-medium text-gray-900">MOMBO Jared Remaliah</h4>
+                                                <p class="text-gray-600">AP1 2021</p>
                                             </div>
                                         </div>
                                     </div>
+
+                                    <!-- Monsieur NZENGUE WONDO Leotard -->
                                     <div class="student-card flex-shrink-0 w-64">
                                         <div class="bg-white rounded-lg shadow-lg overflow-hidden">
                                             <div class="student-info-overlay">
-                                                <h4 class="text-lg font-medium">David</h4>
+                                                <h4 class="text-lg font-medium">NZENGUE WONDO Leotard</h4>
                                                 <p>Sexe: M</p>
-                                                <p>Téléphone: +241 065 43 53 76</p>
+                                                <p>Téléphone: </p>
+                                                <p>Parcours: AP</p>
+                                                <p>Promotion: 2021</p>
+                                            </div>
+                                            <img src="assets/images/image/user.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                            <div class="p-4">
+                                                <h4 class="text-lg font-medium text-gray-900">NZENGUE WONDO Leotard</h4>
+                                                <p class="text-gray-600">AP1 2021</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Monsieur IBINGA MOUSSAVOU Juste Toussaint -->
+                                    <div class="student-card flex-shrink-0 w-64">
+                                        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                            <div class="student-info-overlay">
+                                                <h4 class="text-lg font-medium">IBINGA MOUSSAVOU Juste Toussaint</h4>
+                                                <p>Sexe: M</p>
+                                                <p>Téléphone: </p>
+                                                <p>Parcours: AP</p>
+                                                <p>Promotion: 2021</p>
+                                            </div>
+                                            <img src="assets/images/image/user.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                            <div class="p-4">
+                                                <h4 class="text-lg font-medium text-gray-900">IBINGA MOUSSAVOU Juste Toussaint</h4>
+                                                <p class="text-gray-600">AP1 2021</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Monsieur MANFOUMBI IBINGA David Japhet -->
+                                    <div class="student-card flex-shrink-0 w-64">
+                                        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                            <div class="student-info-overlay">
+                                                <h4 class="text-lg font-medium">MANFOUMBI IBINGA David Japhet</h4>
+                                                <p>Sexe: M</p>
+                                                <p>Téléphone: </p>
                                                 <p>Parcours: AP</p>
                                                 <p>Promotion: 2021</p>
                                             </div>
                                             <img src="assets/images/AP-LP/2021/David.jpeg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
                                             <div class="p-4">
-                                                <h4 class="text-lg font-medium text-gray-900">David</h4>
-                                                 <p class="text-gray-600">AP1 2021</p>
+                                                <h4 class="text-lg font-medium text-gray-900">MANFOUMBI IBINGA David Japhet</h4>
+                                                <p class="text-gray-600">AP1 2021</p>
                                             </div>
                                         </div>
                                     </div>
+
+                                    <!-- Monsieur GWET Abel -->
                                     <div class="student-card flex-shrink-0 w-64">
                                         <div class="bg-white rounded-lg shadow-lg overflow-hidden">
                                             <div class="student-info-overlay">
-                                                <h4 class="text-lg font-medium">FATOU ASSANE</h4>
+                                                <h4 class="text-lg font-medium">GWET Abel</h4>
+                                                <p>Sexe: M</p>
+                                                <p>Téléphone: </p>
+                                                <p>Parcours: AP</p>
+                                                <p>Promotion: 2021</p>
+                                            </div>
+                                            <img src="assets/images/image/user.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                            <div class="p-4">
+                                                <h4 class="text-lg font-medium text-gray-900">GWET Abel</h4>
+                                                <p class="text-gray-600">AP1 2021</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Monsieur ELIANGMANE ABEIGHE Ariel Jordy -->
+                                    <div class="student-card flex-shrink-0 w-64">
+                                        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                            <div class="student-info-overlay">
+                                                <h4 class="text-lg font-medium">ELIANGMANE ABEIGHE Ariel Jordy</h4>
+                                                <p>Sexe: M</p>
+                                                <p>Téléphone: </p>
+                                                <p>Parcours: AP</p>
+                                                <p>Promotion: 2021</p>
+                                            </div>
+                                            <img src="assets/images/AP-LP/2021/ABEGUE.jpeg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                            <div class="p-4">
+                                                <h4 class="text-lg font-medium text-gray-900">ELIANGMANE ABEIGHE Ariel Jordy</h4>
+                                                <p class="text-gray-600">AP1 2021</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Monsieur NGUEMA NDONG Christopher Hemmer -->
+                                    <div class="student-card flex-shrink-0 w-64">
+                                        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                            <div class="student-info-overlay">
+                                                <h4 class="text-lg font-medium">NGUEMA NDONG Christopher Hemmer</h4>
+                                                <p>Sexe: M</p>
+                                                <p>Téléphone: </p>
+                                                <p>Parcours: AP</p>
+                                                <p>Promotion: 2021</p>
+                                            </div>
+                                            <img src="assets/images/image/user.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                            <div class="p-4">
+                                                <h4 class="text-lg font-medium text-gray-900">NGUEMA NDONG Christopher Hemmer</h4>
+                                                <p class="text-gray-600">AP1 2021</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Monsieur MAKAYA BERT Grace Taliane -->
+                                    <div class="student-card flex-shrink-0 w-64">
+                                        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                            <div class="student-info-overlay">
+                                                <h4 class="text-lg font-medium">MAKAYA BERT Grace Taliane</h4>
+                                                <p>Sexe: M</p>
+                                                <p>Téléphone: </p>
+                                                <p>Parcours: AP</p>
+                                                <p>Promotion: 2021</p>
+                                            </div>
+                                            <img src="assets/images/image/user.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                            <div class="p-4">
+                                                <h4 class="text-lg font-medium text-gray-900">MAKAYA BERT Grace Taliane</h4>
+                                                <p class="text-gray-600">AP1 2021</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Monsieur MALONDA Raulvie Franck -->
+                                    <div class="student-card flex-shrink-0 w-64">
+                                        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                            <div class="student-info-overlay">
+                                                <h4 class="text-lg font-medium">MALONDA Raulvie Franck</h4>
+                                                <p>Sexe: M</p>
+                                                <p>Téléphone: </p>
+                                                <p>Parcours: AP</p>
+                                                <p>Promotion: 2021</p>
+                                            </div>
+                                            <img src="assets/images/image/user.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                            <div class="p-4">
+                                                <h4 class="text-lg font-medium text-gray-900">MALONDA Raulvie Franck</h4>
+                                                <p class="text-gray-600">AP1 2021</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Mademoiselle ANGUE ASSEKO Claude Jennifer -->
+                                    <div class="student-card flex-shrink-0 w-64">
+                                        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                            <div class="student-info-overlay">
+                                                <h4 class="text-lg font-medium">ANGUE ASSEKO Claude Jennifer</h4>
                                                 <p>Sexe: F</p>
-                                                <p>Téléphone: +241 062 92 53 57</p>
+                                                <p>Téléphone: </p>
                                                 <p>Parcours: AP</p>
                                                 <p>Promotion: 2021</p>
                                             </div>
-                                            <img src="assets/images/AP-LP/2021/Fatou_Assane.jpeg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                            <img src="assets/images/AP-LP/2021/ANGUE_JENNIFER.jpeg" alt="Étudiante" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
                                             <div class="p-4">
-                                                <h4 class="text-lg font-medium text-gray-900">FATOU ASSANE</h4>
-                                                 <p class="text-gray-600">AP1 2021</p>
+                                                <h4 class="text-lg font-medium text-gray-900">ANGUE ASSEKO Claude Jennifer</h4>
+                                                <p class="text-gray-600">AP1 2021</p>
                                             </div>
                                         </div>
                                     </div>
+
+                                    <!-- Mademoiselle FATOU Hassane -->
                                     <div class="student-card flex-shrink-0 w-64">
                                         <div class="bg-white rounded-lg shadow-lg overflow-hidden">
                                             <div class="student-info-overlay">
-                                                <h4 class="text-lg font-medium">MOULOUNGUI Precieux</h4>
-                                                <p>Sexe: M</p>
-                                                <p>Téléphone: +241 066 74 95 19</p>
+                                                <h4 class="text-lg font-medium">FATOU Hassane</h4>
+                                                <p>Sexe: F</p>
+                                                <p>Téléphone: </p>
                                                 <p>Parcours: AP</p>
                                                 <p>Promotion: 2021</p>
                                             </div>
-                                            <img src="assets/images/AP-LP/2021/MOULOUNGUI_Precieux.jpeg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                            <img src="assets/images/AP-LP/2021/Fatou_Assane.jpeg" alt="Étudiante" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
                                             <div class="p-4">
-                                                <h4 class="text-lg font-medium text-gray-900">MOULOUNGUI Precieux</h4>
-                                                 <p class="text-gray-600">AP1 2021</p>
+                                                <h4 class="text-lg font-medium text-gray-900">FATOU Hassane</h4>
+                                                <p class="text-gray-600">AP1 2021</p>
                                             </div>
                                         </div>
                                     </div>
+
+                                    <!-- Monsieur MANFOUMBI Karlin Jurys -->
                                     <div class="student-card flex-shrink-0 w-64">
                                         <div class="bg-white rounded-lg shadow-lg overflow-hidden">
                                             <div class="student-info-overlay">
-                                                <h4 class="text-lg font-medium">MWOUABO Hendrix</h4>
+                                                <h4 class="text-lg font-medium">MANFOUMBI Karlin Jurys</h4>
                                                 <p>Sexe: M</p>
-                                                <p>Téléphone: +241 062 61 47 15</p>
+                                                <p>Téléphone: </p>
                                                 <p>Parcours: AP</p>
                                                 <p>Promotion: 2021</p>
                                             </div>
-                                            <img src="assets/images/AP-LP/2021/Hendrix.jpeg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                            <img src="assets/images/image/user.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
                                             <div class="p-4">
-                                                <h4 class="text-lg font-medium text-gray-900">MWOUABO Hendrix</h4>
-                                                 <p class="text-gray-600">AP1 2021</p>
+                                                <h4 class="text-lg font-medium text-gray-900">MANFOUMBI Karlin Jurys</h4>
+                                                <p class="text-gray-600">AP1 2021</p>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="student-card flex-shrink-0 w-64">
-                                        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                                            <div class="student-info-overlay">
-                                                <h4 class="text-lg font-medium">HYACINT MAKOBAYE</h4>
-                                                <p>Sexe: M</p>
-                                                <p>Téléphone: +241 077 46 43 18</p>
-                                                <p>Parcours: AP</p>
-                                                <p>Promotion: 2021</p>
-                                            </div>
-                                            <img src="assets/images/AP-LP/2021/Hyacint.jpeg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
-                                            <div class="p-4">
-                                                <h4 class="text-lg font-medium text-gray-900">HYACINT MAKOBAYE</h4>
-                                                 <p class="text-gray-600">AP1 2021</p>
-                                            </div>
-                                        </div>
-                                    </div>
+
+                                    <!-- Monsieur ILOUMBOU Roland Junior -->
                                     <div class="student-card flex-shrink-0 w-64">
                                         <div class="bg-white rounded-lg shadow-lg overflow-hidden">
                                             <div class="student-info-overlay">
                                                 <h4 class="text-lg font-medium">ILOUMBOU Roland Junior</h4>
                                                 <p>Sexe: M</p>
-                                                <p>Téléphone: +241 074 41 77 31</p>
+                                                <p>Téléphone: </p>
                                                 <p>Parcours: AP</p>
                                                 <p>Promotion: 2021</p>
                                             </div>
                                             <img src="assets/images/AP-LP/2021/ILOUMBOU_roland_junior.jpeg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
                                             <div class="p-4">
                                                 <h4 class="text-lg font-medium text-gray-900">ILOUMBOU Roland Junior</h4>
-                                                 <p class="text-gray-600">AP1 2021</p>
+                                                <p class="text-gray-600">AP1 2021</p>
                                             </div>
                                         </div>
                                     </div>
+
+                                    <!-- Monsieur DIOMANDE Mohamed -->
                                     <div class="student-card flex-shrink-0 w-64">
                                         <div class="bg-white rounded-lg shadow-lg overflow-hidden">
                                             <div class="student-info-overlay">
-                                                <h4 class="text-lg font-medium">NZEGUI EVAN</h4>
+                                                <h4 class="text-lg font-medium">DIOMANDE Mohamed</h4>
                                                 <p>Sexe: M</p>
-                                                <p>Téléphone: +241 060 12 76 96</p>
+                                                <p>Téléphone: </p>
                                                 <p>Parcours: AP</p>
                                                 <p>Promotion: 2021</p>
                                             </div>
-                                            <img src="assets/images/AP-LP/2021/NZEGUI_EVAN.jpeg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                            <img src="assets/images/image/user.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
                                             <div class="p-4">
-                                                <h4 class="text-lg font-medium text-gray-900">NZEGUI EVAN</h4>
-                                                 <p class="text-gray-600">AP1 2021</p>
+                                                <h4 class="text-lg font-medium text-gray-900">DIOMANDE Mohamed</h4>
+                                                <p class="text-gray-600">AP1 2021</p>
                                             </div>
                                         </div>
                                     </div>
+
+                                    <!-- Monsieur ONGUINDA Ezechiel Jérémaye -->
                                     <div class="student-card flex-shrink-0 w-64">
                                         <div class="bg-white rounded-lg shadow-lg overflow-hidden">
                                             <div class="student-info-overlay">
-                                                <h4 class="text-lg font-medium">GREKOVOUNGO THIBAUT</h4>
+                                                <h4 class="text-lg font-medium">ONGUINDA Ezechiel Jérémaye</h4>
                                                 <p>Sexe: M</p>
-                                                <p>Téléphone: +241 062 93 84 98</p>
+                                                <p>Téléphone: </p>
+                                                <p>Parcours: AP</p>
+                                                <p>Promotion: 2021</p>
+                                            </div>
+                                            <img src="assets/images/image/user.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                            <div class="p-4">
+                                                <h4 class="text-lg font-medium text-gray-900">ONGUINDA Ezechiel Jérémaye</h4>
+                                                <p class="text-gray-600">AP1 2021</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Monsieur MOULOUNGUI Précieux Patient -->
+                                    <div class="student-card flex-shrink-0 w-64">
+                                        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                            <div class="student-info-overlay">
+                                                <h4 class="text-lg font-medium">MOULOUNGUI Précieux Patient</h4>
+                                                <p>Sexe: M</p>
+                                                <p>Téléphone: </p>
+                                                <p>Parcours: AP</p>
+                                                <p>Promotion: 2021</p>
+                                            </div>
+                                            <img src="assets/images/AP-LP/2021/MOULOUNGUI_Precieux.jpeg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                            <div class="p-4">
+                                                <h4 class="text-lg font-medium text-gray-900">MOULOUNGUI Précieux Patient</h4>
+                                                <p class="text-gray-600">AP1 2021</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Monsieur MWOUABO Hendrix Marvin -->
+                                    <div class="student-card flex-shrink-0 w-64">
+                                        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                            <div class="student-info-overlay">
+                                                <h4 class="text-lg font-medium">MWOUABO Hendrix Marvin</h4>
+                                                <p>Sexe: M</p>
+                                                <p>Téléphone: </p>
+                                                <p>Parcours: AP</p>
+                                                <p>Promotion: 2021</p>
+                                            </div>
+                                            <img src="assets/images/AP-LP/2021/Hendrix.jpeg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                            <div class="p-4">
+                                                <h4 class="text-lg font-medium text-gray-900">MWOUABO Hendrix Marvin</h4>
+                                                <p class="text-gray-600">AP1 2021</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Monsieur NZIENGUI-MOUNGUENGUI Evan Triphene -->
+                                    <div class="student-card flex-shrink-0 w-64">
+                                        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                            <div class="student-info-overlay">
+                                                <h4 class="text-lg font-medium">NZIENGUI-MOUNGUENGUI Evan Triphene</h4>
+                                                <p>Sexe: M</p>
+                                                <p>Téléphone: </p>
+                                                <p>Parcours: AP</p>
+                                                <p>Promotion: 2021</p>
+                                            </div>
+                                            <img src="assets/images/image/user.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                            <div class="p-4">
+                                                <h4 class="text-lg font-medium text-gray-900">NZIENGUI-MOUNGUENGUI Evan Triphene</h4>
+                                                <p class="text-gray-600">AP1 2021</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Monsieur OBANGOME EKWAGHE Narcisse Franck -->
+                                    <div class="student-card flex-shrink-0 w-64">
+                                        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                            <div class="student-info-overlay">
+                                                <h4 class="text-lg font-medium">OBANGOME EKWAGHE Narcisse Franck</h4>
+                                                <p>Sexe: M</p>
+                                                <p>Téléphone: </p>
+                                                <p>Parcours: AP</p>
+                                                <p>Promotion: 2021</p>
+                                            </div>
+                                            <img src="assets/images/image/user.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                            <div class="p-4">
+                                                <h4 class="text-lg font-medium text-gray-900">OBANGOME EKWAGHE Narcisse Franck</h4>
+                                                <p class="text-gray-600">AP1 2021</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Monsieur GREKOVOUNGBO Thibaut Mermoz -->
+                                    <div class="student-card flex-shrink-0 w-64">
+                                        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                            <div class="student-info-overlay">
+                                                <h4 class="text-lg font-medium">GREKOVOUNGBO Thibaut Mermoz</h4>
+                                                <p>Sexe: M</p>
+                                                <p>Téléphone: </p>
                                                 <p>Parcours: AP</p>
                                                 <p>Promotion: 2021</p>
                                             </div>
                                             <img src="assets/images/AP-LP/2021/THIBAUT.jpeg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
                                             <div class="p-4">
-                                                <h4 class="text-lg font-medium text-gray-900">GREKOVOUNGO THIBAUT</h4>
-                                                 <p class="text-gray-600">AP1 2021</p>
+                                                <h4 class="text-lg font-medium text-gray-900">GREKOVOUNGBO Thibaut Mermoz</h4>
+                                                <p class="text-gray-600">AP1 2021</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Monsieur BAMBO Le Bonheur -->
+                                    <div class="student-card flex-shrink-0 w-64">
+                                        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                            <div class="student-info-overlay">
+                                                <h4 class="text-lg font-medium">BAMBO Le Bonheur</h4>
+                                                <p>Sexe: M</p>
+                                                <p>Téléphone: </p>
+                                                <p>Parcours: AP</p>
+                                                <p>Promotion: 2021</p>
+                                            </div>
+                                            <img src="assets/images/AP-LP/2021/Bonheur.jpeg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                            <div class="p-4">
+                                                <h4 class="text-lg font-medium text-gray-900">BAMBO Le Bonheur</h4>
+                                                <p class="text-gray-600">AP1 2021</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Monsieur HYACINTH Makobaye -->
+                                    <div class="student-card flex-shrink-0 w-64">
+                                        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                            <div class="student-info-overlay">
+                                                <h4 class="text-lg font-medium">HYACINTH Makobaye</h4>
+                                                <p>Sexe: M</p>
+                                                <p>Téléphone: </p>
+                                                <p>Parcours: AP</p>
+                                                <p>Promotion: 2021</p>
+                                            </div>
+                                            <img src="assets/images/AP-LP/2021/Hyacint.jpeg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                            <div class="p-4">
+                                                <h4 class="text-lg font-medium text-gray-900">HYACINTH Makobaye</h4>
+                                                <p class="text-gray-600">AP1 2021</p>
                                             </div>
                                         </div>
                                     </div>
@@ -583,27 +1203,648 @@
                         </div>
                     </div>
                     <!--Fin 2021-->
-                </details>
-                <details id="aplp-2020" class="mb-6 border border-blue-200 rounded-md p-4 bg-white">
+                </details></div>
+                <div class="flex flex-wrap ">
+                <details id="aplp-2022" class="mb-6 border border-blue-200 rounded-md p-4 bg-white max-w-full">
                     <summary class="cursor-pointer text-blue-600 font-semibold text-lg">
                         2022
                     </summary>
+                    <div class="bg-gray-50 rounded-lg shadow-lg p-8">
+                        <div class="relative overflow-hidden">
+                    <div class="carousel-container">
+                                <div class="carousel-track animate-scroll">
+                                    <!-- Monsieur ABOULI Alphoncia Gloire -->
+                                    <div class="student-card flex-shrink-0 w-64">
+                                        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                            <div class="student-info-overlay">
+                                                <h4 class="text-lg font-medium">ABOULI Alphoncia Gloire</h4>
+                                                <p>Sexe: M</p>
+                                                <p>Téléphone: </p>
+                                                <p>Parcours: AP</p>
+                                                <p>Promotion: 2022</p>
+                                            </div>
+                                            <img src="assets/images/image/user.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                            <div class="p-4">
+                                                <h4 class="text-lg font-medium text-gray-900">ABOULI Alphoncia Gloire</h4>
+                                                <p class="text-gray-600">AP1 2022</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Monsieur MAKAYA BERT Grace Taliane -->
+                                    <div class="student-card flex-shrink-0 w-64">
+                                        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                            <div class="student-info-overlay">
+                                                <h4 class="text-lg font-medium">MAKAYA BERT Grace Taliane</h4>
+                                                <p>Sexe: M</p>
+                                                <p>Téléphone: </p>
+                                                <p>Parcours: AP</p>
+                                                <p>Promotion: 2022</p>
+                                            </div>
+                                            <img src="assets/images/image/user.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                            <div class="p-4">
+                                                <h4 class="text-lg font-medium text-gray-900">MAKAYA BERT Grace Taliane</h4>
+                                                <p class="text-gray-600">AP1 2022</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Monsieur MALONDA Raulvie Franck -->
+                                    <div class="student-card flex-shrink-0 w-64">
+                                        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                            <div class="student-info-overlay">
+                                                <h4 class="text-lg font-medium">MALONDA Raulvie Franck</h4>
+                                                <p>Sexe: M</p>
+                                                <p>Téléphone: </p>
+                                                <p>Parcours: AP</p>
+                                                <p>Promotion: 2022</p>
+                                            </div>
+                                            <img src="assets/images/image/user.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                            <div class="p-4">
+                                                <h4 class="text-lg font-medium text-gray-900">MALONDA Raulvie Franck</h4>
+                                                <p class="text-gray-600">AP1 2022</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Monsieur NZENGUE WONDO Leotard -->
+                                    <div class="student-card flex-shrink-0 w-64">
+                                        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                            <div class="student-info-overlay">
+                                                <h4 class="text-lg font-medium">NZENGUE WONDO Leotard</h4>
+                                                <p>Sexe: M</p>
+                                                <p>Téléphone: </p>
+                                                <p>Parcours: AP</p>
+                                                <p>Promotion: 2022</p>
+                                            </div>
+                                            <img src="assets/images/image/user.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                            <div class="p-4">
+                                                <h4 class="text-lg font-medium text-gray-900">NZENGUE WONDO Leotard</h4>
+                                                <p class="text-gray-600">AP1 2022</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Monsieur OBANGOME EKWAGHE Narcisse Franck -->
+                                    <div class="student-card flex-shrink-0 w-64">
+                                        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                            <div class="student-info-overlay">
+                                                <h4 class="text-lg font-medium">OBANGOME EKWAGHE Narcisse Franck</h4>
+                                                <p>Sexe: M</p>
+                                                <p>Téléphone: </p>
+                                                <p>Parcours: AP</p>
+                                                <p>Promotion: 2022</p>
+                                            </div>
+                                            <img src="assets/images/image/user.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                            <div class="p-4">
+                                                <h4 class="text-lg font-medium text-gray-900">OBANGOME EKWAGHE Narcisse Franck</h4>
+                                                <p class="text-gray-600">AP1 2022</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Monsieur NDZIME ABOGHE Joseph -->
+                                    <div class="student-card flex-shrink-0 w-64">
+                                        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                            <div class="student-info-overlay">
+                                                <h4 class="text-lg font-medium">NDZIME ABOGHE Joseph</h4>
+                                                <p>Sexe: M</p>
+                                                <p>Téléphone: </p>
+                                                <p>Parcours: AP</p>
+                                                <p>Promotion: 2022</p>
+                                            </div>
+                                            <img src="assets/images/image/user.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                            <div class="p-4">
+                                                <h4 class="text-lg font-medium text-gray-900">NDZIME ABOGHE Joseph</h4>
+                                                <p class="text-gray-600">AP1 2022</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Mademoiselle ETOURA ONDENO Sara Chancia -->
+                                    <div class="student-card flex-shrink-0 w-64">
+                                        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                            <div class="student-info-overlay">
+                                                <h4 class="text-lg font-medium">ETOURA ONDENO Sara Chancia</h4>
+                                                <p>Sexe: F</p>
+                                                <p>Téléphone: </p>
+                                                <p>Parcours: AP</p>
+                                                <p>Promotion: 2022</p>
+                                            </div>
+                                            <img src="assets/images/image/user.jpg" alt="Étudiante" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                            <div class="p-4">
+                                                <h4 class="text-lg font-medium text-gray-900">ETOURA ONDENO Sara Chancia</h4>
+                                                <p class="text-gray-600">AP1 2022</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Monsieur NDONG NYNGONE NGOUA Kelly Leavan -->
+                                    <div class="student-card flex-shrink-0 w-64">
+                                        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                            <div class="student-info-overlay">
+                                                <h4 class="text-lg font-medium">NDONG NYNGONE NGOUA Kelly Leavan</h4>
+                                                <p>Sexe: M</p>
+                                                <p>Téléphone: </p>
+                                                <p>Parcours: AP</p>
+                                                <p>Promotion: 2022</p>
+                                            </div>
+                                            <img src="assets/images/image/user.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                            <div class="p-4">
+                                                <h4 class="text-lg font-medium text-gray-900">NDONG NYNGONE NGOUA Kelly Leavan</h4>
+                                                <p class="text-gray-600">AP1 2022</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Monsieur AFANEGNOH BOUSSOUGOU Diboti Osée -->
+                                    <div class="student-card flex-shrink-0 w-64">
+                                        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                            <div class="student-info-overlay">
+                                                <h4 class="text-lg font-medium">AFANEGNOH BOUSSOUGOU Diboti Osée</h4>
+                                                <p>Sexe: M</p>
+                                                <p>Téléphone: </p>
+                                                <p>Parcours: AP</p>
+                                                <p>Promotion: 2022</p>
+                                            </div>
+                                            <img src="assets/images/image/user.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                            <div class="p-4">
+                                                <h4 class="text-lg font-medium text-gray-900">AFANEGNOH BOUSSOUGOU Diboti Osée</h4>
+                                                <p class="text-gray-600">AP1 2022</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Monsieur MINTSA Karim Darel -->
+                                    <div class="student-card flex-shrink-0 w-64">
+                                        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                            <div class="student-info-overlay">
+                                                <h4 class="text-lg font-medium">MINTSA Karim Darel</h4>
+                                                <p>Sexe: M</p>
+                                                <p>Téléphone: </p>
+                                                <p>Parcours: AP</p>
+                                                <p>Promotion: 2022</p>
+                                            </div>
+                                            <img src="assets/images/image/user.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                            <div class="p-4">
+                                                <h4 class="text-lg font-medium text-gray-900">MINTSA Karim Darel</h4>
+                                                <p class="text-gray-600">AP1 2022</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Monsieur KOMBILA N'SOUGAN Edere Levy -->
+                                    <div class="student-card flex-shrink-0 w-64">
+                                        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                            <div class="student-info-overlay">
+                                                <h4 class="text-lg font-medium">KOMBILA N'SOUGAN Edere Levy</h4>
+                                                <p>Sexe: M</p>
+                                                <p>Téléphone: </p>
+                                                <p>Parcours: AP</p>
+                                                <p>Promotion: 2022</p>
+                                            </div>
+                                            <img src="assets/images/image/user.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                            <div class="p-4">
+                                                <h4 class="text-lg font-medium text-gray-900">KOMBILA N'SOUGAN Edere Levy</h4>
+                                                <p class="text-gray-600">AP1 2022</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Mademoiselle GUEKEM YEMELON Hilary Cynthia -->
+                                    <div class="student-card flex-shrink-0 w-64">
+                                        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                            <div class="student-info-overlay">
+                                                <h4 class="text-lg font-medium">GUEKEM YEMELON Hilary Cynthia</h4>
+                                                <p>Sexe: F</p>
+                                                <p>Téléphone: </p>
+                                                <p>Parcours: AP</p>
+                                                <p>Promotion: 2022</p>
+                                            </div>
+                                            <img src="assets/images/image/user.jpg" alt="Étudiante" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                            <div class="p-4">
+                                                <h4 class="text-lg font-medium text-gray-900">GUEKEM YEMELON Hilary Cynthia</h4>
+                                                <p class="text-gray-600">AP1 2022</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Mademoiselle SEONE Assita -->
+                                    <div class="student-card flex-shrink-0 w-64">
+                                        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                            <div class="student-info-overlay">
+                                                <h4 class="text-lg font-medium">SEONE Assita</h4>
+                                                <p>Sexe: F</p>
+                                                <p>Téléphone: </p>
+                                                <p>Parcours: AP</p>
+                                                <p>Promotion: 2022</p>
+                                            </div>
+                                            <img src="assets/images/image/user.jpg" alt="Étudiante" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                            <div class="p-4">
+                                                <h4 class="text-lg font-medium text-gray-900">SEONE Assita</h4>
+                                                <p class="text-gray-600">AP1 2022</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Monsieur NZAME ASSOUMOU Dharyl Vetnyl -->
+                                    <div class="student-card flex-shrink-0 w-64">
+                                        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                            <div class="student-info-overlay">
+                                                <h4 class="text-lg font-medium">NZAME ASSOUMOU Dharyl Vetnyl</h4>
+                                                <p>Sexe: M</p>
+                                                <p>Téléphone: </p>
+                                                <p>Parcours: AP</p>
+                                                <p>Promotion: 2022</p>
+                                            </div>
+                                            <img src="assets/images/image/user.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                            <div class="p-4">
+                                                <h4 class="text-lg font-medium text-gray-900">NZAME ASSOUMOU Dharyl Vetnyl</h4>
+                                                <p class="text-gray-600">AP1 2022</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Mademoiselle TCHAGODOMOU Shakira -->
+                                    <div class="student-card flex-shrink-0 w-64">
+                                        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                            <div class="student-info-overlay">
+                                                <h4 class="text-lg font-medium">TCHAGODOMOU Shakira</h4>
+                                                <p>Sexe: F</p>
+                                                <p>Téléphone: </p>
+                                                <p>Parcours: AP</p>
+                                                <p>Promotion: 2022</p>
+                                            </div>
+                                            <img src="assets/images/image/user.jpg" alt="Étudiante" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                            <div class="p-4">
+                                                <h4 class="text-lg font-medium text-gray-900">TCHAGODOMOU Shakira</h4>
+                                                <p class="text-gray-600">AP1 2022</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Monsieur MBADINGA MBOUALA Osée -->
+                                    <div class="student-card flex-shrink-0 w-64">
+                                        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                            <div class="student-info-overlay">
+                                                <h4 class="text-lg font-medium">MBADINGA MBOUALA Osée</h4>
+                                                <p>Sexe: M</p>
+                                                <p>Téléphone: </p>
+                                                <p>Parcours: AP</p>
+                                                <p>Promotion: 2022</p>
+                                            </div>
+                                            <img src="assets/images/image/user.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                            <div class="p-4">
+                                                <h4 class="text-lg font-medium text-gray-900">MBADINGA MBOUALA Osée</h4>
+                                                <p class="text-gray-600">AP1 2022</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Monsieur NZE BILOGHE Emmanuel saviola -->
+                                    <div class="student-card flex-shrink-0 w-64">
+                                        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                            <div class="student-info-overlay">
+                                                <h4 class="text-lg font-medium">NZE BILOGHE Emmanuel saviola</h4>
+                                                <p>Sexe: M</p>
+                                                <p>Téléphone: </p>
+                                                <p>Parcours: AP</p>
+                                                <p>Promotion: 2022</p>
+                                            </div>
+                                            <img src="assets/images/image/user.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                            <div class="p-4">
+                                                <h4 class="text-lg font-medium text-gray-900">NZE BILOGHE Emmanuel saviola</h4>
+                                                <p class="text-gray-600">AP1 2022</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Monsieur MANDOUKOU Jordy -->
+                                    <div class="student-card flex-shrink-0 w-64">
+                                        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                            <div class="student-info-overlay">
+                                                <h4 class="text-lg font-medium">MANDOUKOU Jordy</h4>
+                                                <p>Sexe: M</p>
+                                                <p>Téléphone: </p>
+                                                <p>Parcours: AP</p>
+                                                <p>Promotion: 2022</p>
+                                            </div>
+                                            <img src="assets/images/image/user.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                            <div class="p-4">
+                                                <h4 class="text-lg font-medium text-gray-900">MANDOUKOU Jordy</h4>
+                                                <p class="text-gray-600">AP1 2022</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Monsieur ONDO OVONO Christ Owen -->
+                                    <div class="student-card flex-shrink-0 w-64">
+                                        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                            <div class="student-info-overlay">
+                                                <h4 class="text-lg font-medium">ONDO OVONO Christ Owen</h4>
+                                                <p>Sexe: M</p>
+                                                <p>Téléphone: </p>
+                                                <p>Parcours: AP</p>
+                                                <p>Promotion: 2022</p>
+                                            </div>
+                                            <img src="assets/images/image/user.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                            <div class="p-4">
+                                                <h4 class="text-lg font-medium text-gray-900">ONDO OVONO Christ Owen</h4>
+                                                <p class="text-gray-600">AP1 2022</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Monsieur EKOME EKOME Elie Thales -->
+                                    <div class="student-card flex-shrink-0 w-64">
+                                        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                            <div class="student-info-overlay">
+                                                <h4 class="text-lg font-medium">EKOME EKOME Elie Thales</h4>
+                                                <p>Sexe: M</p>
+                                                <p>Téléphone: </p>
+                                                <p>Parcours: AP</p>
+                                                <p>Promotion: 2022</p>
+                                            </div>
+                                            <img src="assets/images/image/user.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                            <div class="p-4">
+                                                <h4 class="text-lg font-medium text-gray-900">EKOME EKOME Elie Thales</h4>
+                                                <p class="text-gray-600">AP1 2022</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Monsieur EVOUNG BITOME MOUDZIEGOU Donovan Brunel Bertrand -->
+                                    <div class="student-card flex-shrink-0 w-64">
+                                        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                            <div class="student-info-overlay">
+                                                <h4 class="text-lg font-medium">EVOUNG BITOME MOUDZIEGOU Donovan Brunel Bertrand</h4>
+                                                <p>Sexe: M</p>
+                                                <p>Téléphone: </p>
+                                                <p>Parcours: AP</p>
+                                                <p>Promotion: 2022</p>
+                                            </div>
+                                            <img src="assets/images/image/user.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                            <div class="p-4">
+                                                <h4 class="text-lg font-medium text-gray-900">EVOUNG BITOME MOUDZIEGOU Donovan Brunel Bertrand</h4>
+                                                <p class="text-gray-600">AP1 2022</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Monsieur MBA ONDO Dieudonné -->
+                                    <div class="student-card flex-shrink-0 w-64">
+                                        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                            <div class="student-info-overlay">
+                                                <h4 class="text-lg font-medium">MBA ONDO Dieudonné</h4>
+                                                <p>Sexe: M</p>
+                                                <p>Téléphone: </p>
+                                                <p>Parcours: AP</p>
+                                                <p>Promotion: 2022</p>
+                                            </div>
+                                            <img src="assets/images/image/user.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                            <div class="p-4">
+                                                <h4 class="text-lg font-medium text-gray-900">MBA ONDO Dieudonné</h4>
+                                                <p class="text-gray-600">AP1 2022</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Monsieur TEPONNO SUEBANG Nick Hariel -->
+                                    <div class="student-card flex-shrink-0 w-64">
+                                        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                            <div class="student-info-overlay">
+                                                <h4 class="text-lg font-medium">TEPONNO SUEBANG Nick Hariel</h4>
+                                                <p>Sexe: M</p>
+                                                <p>Téléphone: </p>
+                                                <p>Parcours: AP</p>
+                                                <p>Promotion: 2022</p>
+                                            </div>
+                                            <img src="assets/images/image/user.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                            <div class="p-4">
+                                                <h4 class="text-lg font-medium text-gray-900">TEPONNO SUEBANG Nick Hariel</h4>
+                                                <p class="text-gray-600">AP1 2022</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Monsieur MBILA IBOUANGA Yowane Morel -->
+                                    <div class="student-card flex-shrink-0 w-64">
+                                        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                            <div class="student-info-overlay">
+                                                <h4 class="text-lg font-medium">MBILA IBOUANGA Yowane Morel</h4>
+                                                <p>Sexe: M</p>
+                                                <p>Téléphone: </p>
+                                                <p>Parcours: AP</p>
+                                                <p>Promotion: 2022</p>
+                                            </div>
+                                            <img src="assets/images/image/user.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                            <div class="p-4">
+                                                <h4 class="text-lg font-medium text-gray-900">MBILA IBOUANGA Yowane Morel</h4>
+                                                <p class="text-gray-600">AP1 2022</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Monsieur MBIMBI Larry Nhayel -->
+                                    <div class="student-card flex-shrink-0 w-64">
+                                        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                            <div class="student-info-overlay">
+                                                <h4 class="text-lg font-medium">MBIMBI Larry Nhayel</h4>
+                                                <p>Sexe: M</p>
+                                                <p>Téléphone: </p>
+                                                <p>Parcours: AP</p>
+                                                <p>Promotion: 2022</p>
+                                            </div>
+                                            <img src="assets/images/image/user.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                            <div class="p-4">
+                                                <h4 class="text-lg font-medium text-gray-900">MBIMBI Larry Nhayel</h4>
+                                                <p class="text-gray-600">AP1 2022</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Mademoiselle BENDOME NTOUTOUME Elise Josita -->
+                                    <div class="student-card flex-shrink-0 w-64">
+                                        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                            <div class="student-info-overlay">
+                                                <h4 class="text-lg font-medium">BENDOME NTOUTOUME Elise Josita</h4>
+                                                <p>Sexe: F</p>
+                                                <p>Téléphone: </p>
+                                                <p>Parcours: AP</p>
+                                                <p>Promotion: 2022</p>
+                                            </div>
+                                            <img src="assets/images/image/user.jpg" alt="Étudiante" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                            <div class="p-4">
+                                                <h4 class="text-lg font-medium text-gray-900">BENDOME NTOUTOUME Elise Josita</h4>
+                                                <p class="text-gray-600">AP1 2022</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Monsieur TAÏROU IDRISSOU Anice Adededji -->
+                                    <div class="student-card flex-shrink-0 w-64">
+                                        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                            <div class="student-info-overlay">
+                                                <h4 class="text-lg font-medium">TAÏROU IDRISSOU Anice Adededji</h4>
+                                                <p>Sexe: M</p>
+                                                <p>Téléphone: </p>
+                                                <p>Parcours: AP</p>
+                                                <p>Promotion: 2022</p>
+                                            </div>
+                                            <img src="assets/images/image/user.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                            <div class="p-4">
+                                                <h4 class="text-lg font-medium text-gray-900">TAÏROU IDRISSOU Anice Adededji</h4>
+                                                <p class="text-gray-600">AP1 2022</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Monsieur KIMASSOUM Ngaradji -->
+                                    <div class="student-card flex-shrink-0 w-64">
+                                        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                            <div class="student-info-overlay">
+                                                <h4 class="text-lg font-medium">KIMASSOUM Ngaradji</h4>
+                                                <p>Sexe: M</p>
+                                                <p>Téléphone: </p>
+                                                <p>Parcours: AP</p>
+                                                <p>Promotion: 2022</p>
+                                            </div>
+                                            <img src="assets/images/image/user.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                            <div class="p-4">
+                                                <h4 class="text-lg font-medium text-gray-900">KIMASSOUM Ngaradji</h4>
+                                                <p class="text-gray-600">AP1 2022</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Monsieur ASSINA Hermann Pina -->
+                                    <div class="student-card flex-shrink-0 w-64">
+                                        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                            <div class="student-info-overlay">
+                                                <h4 class="text-lg font-medium">ASSINA Hermann Pina</h4>
+                                                <p>Sexe: M</p>
+                                                <p>Téléphone: </p>
+                                                <p>Parcours: AP</p>
+                                                <p>Promotion: 2022</p>
+                                            </div>
+                                            <img src="assets/images/image/user.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                            <div class="p-4">
+                                                <h4 class="text-lg font-medium text-gray-900">ASSINA Hermann Pina</h4>
+                                                <p class="text-gray-600">AP1 2022</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Mademoiselle MADJILEM ALREMADJI Alice -->
+                                    <div class="student-card flex-shrink-0 w-64">
+                                        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                            <div class="student-info-overlay">
+                                                <h4 class="text-lg font-medium">MADJILEM ALREMADJI Alice</h4>
+                                                <p>Sexe: F</p>
+                                                <p>Téléphone: </p>
+                                                <p>Parcours: AP</p>
+                                                <p>Promotion: 2022</p>
+                                            </div>
+                                            <img src="assets/images/image/user.jpg" alt="Étudiante" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                            <div class="p-4">
+                                                <h4 class="text-lg font-medium text-gray-900">MADJILEM ALREMADJI Alice</h4>
+                                                <p class="text-gray-600">AP1 2022</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Monsieur EPIGAT Arsene Harry -->
+                                    <div class="student-card flex-shrink-0 w-64">
+                                        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                            <div class="student-info-overlay">
+                                                <h4 class="text-lg font-medium">EPIGAT Arsene Harry</h4>
+                                                <p>Sexe: M</p>
+                                                <p>Téléphone: </p>
+                                                <p>Parcours: AP</p>
+                                                <p>Promotion: 2022</p>
+                                            </div>
+                                            <img src="assets/images/image/user.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                            <div class="p-4">
+                                                <h4 class="text-lg font-medium text-gray-900">EPIGAT Arsene Harry</h4>
+                                                <p class="text-gray-600">AP1 2022</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Monsieur LOUBEHRA-BEKOUTOU Franck -->
+                                    <div class="student-card flex-shrink-0 w-64">
+                                        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                            <div class="student-info-overlay">
+                                                <h4 class="text-lg font-medium">LOUBEHRA-BEKOUTOU Franck</h4>
+                                                <p>Sexe: M</p>
+                                                <p>Téléphone: </p>
+                                                <p>Parcours: AP</p>
+                                                <p>Promotion: 2022</p>
+                                            </div>
+                                            <img src="assets/images/image/user.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                            <div class="p-4">
+                                                <h4 class="text-lg font-medium text-gray-900">LOUBEHRA-BEKOUTOU Franck</h4>
+                                                <p class="text-gray-600">AP1 2022</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Monsieur ONDO MBARA Jean -->
+                                    <div class="student-card flex-shrink-0 w-64">
+                                        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                            <div class="student-info-overlay">
+                                                <h4 class="text-lg font-medium">ONDO MBARA Jean</h4>
+                                                <p>Sexe: M</p>
+                                                <p>Téléphone: </p>
+                                                <p>Parcours: AP</p>
+                                                <p>Promotion: 2022</p>
+                                            </div>
+                                            <img src="assets/images/image/user.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                            <div class="p-4">
+                                                <h4 class="text-lg font-medium text-gray-900">ONDO MBARA Jean</h4>
+                                                <p class="text-gray-600">AP1 2022</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Mademoiselle MOUKELI Daniella -->
+                                    <div class="student-card flex-shrink-0 w-64">
+                                        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                            <div class="student-info-overlay">
+                                                <h4 class="text-lg font-medium">MOUKELI Daniella</h4>
+                                                <p>Sexe: F</p>
+                                                <p>Téléphone: </p>
+                                                <p>Parcours: AP</p>
+                                                <p>Promotion: 2022</p>
+                                            </div>
+                                            <img src="assets/images/image/user.jpg" alt="Étudiante" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                                            <div class="p-4">
+                                                <h4 class="text-lg font-medium text-gray-900">MOUKELI Daniella</h4>
+                                                <p class="text-gray-600">AP1 2022</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    </div>
+                    </div>
+                                    
                     
-                </details>
-                <details id="aplp-2020" class="mb-6 border border-blue-200 rounded-md p-4 bg-white">
+                </details></div>
+                <div class="flex flex-wrap ">
+                <details id="aplp-2023" class="mb-6 border border-blue-200 rounded-md p-4 bg-white max-w-full">
                     <summary class="cursor-pointer text-blue-600 font-semibold text-lg">
                         2023
                     </summary>
 
                      <div> <br> <h1>PAS DE CONCOURS CETTE ANNEE</h1></div>
                     
-                </details>
-                <details id="aplp-2020" class="mb-6 border border-blue-200 rounded-md p-4 bg-white">
+                </details></div>
+                <div class="flex flex-wrap ">
+                <details id="aplp-2024" class="mb-6 border border-blue-200 rounded-md p-4 bg-white max-w-full">
                     <summary class="cursor-pointer text-blue-600 font-semibold text-lg">
                         2024
                     </summary>
                     
-                </details>
+                </details></div>
                 
                 <!--<a href="#aplp-2024" class="bg-blue-100 px-4 py-2 rounded hover:bg-blue-200">2024</a>-->
             </div>
@@ -613,9 +1854,157 @@
         <!-- Répéter pour MIAGE et ING -->
         <section class="mb-16" id="miage">
             <h2 class="text-2xl font-bold text-purple-600 mb-4">MIAGE - Promotions</h2>
-            <div class="flex flex-wrap gap-4 mb-8">
-                <a href="#miage-2024" class="bg-purple-100 px-4 py-2 rounded hover:bg-purple-200">2024</a>
+<div class="flex flex-wrap ">
+
+            <details id="aplp-2020" class="mb-6 border border-blue-200 rounded-md p-4 bg-white max-w-full">
+                    <summary class="cursor-pointer text-blue-600 font-semibold text-lg">
+                        2020
+                    </summary>
+
+                    <div class="bg-gray-50 rounded-lg shadow-lg p-8">
+                <div class="relative overflow-hidden">
+            <div class="carousel-container">
+                <div class="carousel-track animate-scroll">
+
+                    <!-- Monsieur AKONDO Nikabou -->
+                    <div class="student-card flex-shrink-0 w-64">
+                        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                            <div class="student-info-overlay">
+                                <h4 class="text-lg font-medium">AKONDO Nikabou</h4>
+                                <p>Sexe: M</p>
+                                <p>Téléphone: </p>
+                                <p>Parcours: MIAGE</p>
+                                <p>Promotion: 2021</p>
+                            </div>
+                            <img src="assets/images/image/user.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                            <div class="p-4">
+                                <h4 class="text-lg font-medium text-gray-900">AKONDO Nikabou</h4>
+                                <p class="text-gray-600">MIAGE 2021</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Monsieur EKOME ONGONE Guy Parfait -->
+                    <div class="student-card flex-shrink-0 w-64">
+                        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                            <div class="student-info-overlay">
+                                <h4 class="text-lg font-medium">EKOME ONGONE Guy Parfait</h4>
+                                <p>Sexe: M</p>
+                                <p>Téléphone: </p>
+                                <p>Parcours: MIAGE</p>
+                                <p>Promotion: 2021</p>
+                            </div>
+                            <img src="assets/images/image/user.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                            <div class="p-4">
+                                <h4 class="text-lg font-medium text-gray-900">EKOME ONGONE Guy Parfait</h4>
+                                <p class="text-gray-600">MIAGE 2021</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Monsieur ESSONGUE ONANGA Evan -->
+                    <div class="student-card flex-shrink-0 w-64">
+                        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                            <div class="student-info-overlay">
+                                <h4 class="text-lg font-medium">ESSONGUE ONANGA Evan</h4>
+                                <p>Sexe: M</p>
+                                <p>Téléphone: </p>
+                                <p>Parcours: MIAGE</p>
+                                <p>Promotion: 2021</p>
+                            </div>
+                            <img src="assets/images/image/user.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                            <div class="p-4">
+                                <h4 class="text-lg font-medium text-gray-900">ESSONGUE ONANGA Evan</h4>
+                                <p class="text-gray-600">MIAGE 2021</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mademoiselle ITALI-MOUROU Imelda -->
+                    <div class="student-card flex-shrink-0 w-64">
+                        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                            <div class="student-info-overlay">
+                                <h4 class="text-lg font-medium">ITALI-MOUROU Imelda</h4>
+                                <p>Sexe: F</p>
+                                <p>Téléphone: </p>
+                                <p>Parcours: MIAGE</p>
+                                <p>Promotion: 2021</p>
+                            </div>
+                            <img src="assets/images/image/user.jpg" alt="Étudiante" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                            <div class="p-4">
+                                <h4 class="text-lg font-medium text-gray-900">ITALI-MOUROU Imelda</h4>
+                                <p class="text-gray-600">MIAGE 2021</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mademoiselle KEITA Saran -->
+                    <div class="student-card flex-shrink-0 w-64">
+                        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                            <div class="student-info-overlay">
+                                <h4 class="text-lg font-medium">KEITA Saran</h4>
+                                <p>Sexe: F</p>
+                                <p>Téléphone: </p>
+                                <p>Parcours: MIAGE</p>
+                                <p>Promotion: 2021</p>
+                            </div>
+                            <img src="assets/images/image/user.jpg" alt="Étudiante" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                            <div class="p-4">
+                                <h4 class="text-lg font-medium text-gray-900">KEITA Saran</h4>
+                                <p class="text-gray-600">MIAGE 2021</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Monsieur MOUKABI NGWA Brice Alain -->
+                    <div class="student-card flex-shrink-0 w-64">
+                        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                            <div class="student-info-overlay">
+                                <h4 class="text-lg font-medium">MOUKABI NGWA Brice Alain</h4>
+                                <p>Sexe: M</p>
+                                <p>Téléphone: </p>
+                                <p>Parcours: MIAGE</p>
+                                <p>Promotion: 2021</p>
+                            </div>
+                            <img src="assets/images/image/user.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                            <div class="p-4">
+                                <h4 class="text-lg font-medium text-gray-900">MOUKABI NGWA Brice Alain</h4>
+                                <p class="text-gray-600">MIAGE 2021</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Monsieur NDONG OBIANG Wilfried Edmond -->
+                    <div class="student-card flex-shrink-0 w-64">
+                        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                            <div class="student-info-overlay">
+                                <h4 class="text-lg font-medium">NDONG OBIANG Wilfried Edmond</h4>
+                                <p>Sexe: M</p>
+                                <p>Téléphone: </p>
+                                <p>Parcours: MIAGE</p>
+                                <p>Promotion: 2021</p>
+                            </div>
+                            <img src="assets/images/image/user.jpg" alt="Étudiant" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                            <div class="p-4">
+                                <h4 class="text-lg font-medium text-gray-900">NDONG OBIANG Wilfried Edmond</h4>
+                                <p class="text-gray-600">MIAGE 2021</p>
+                            </div>
+                        </div>
+                    </div>
             </div>
+
+
+                    </details>
+</div>
+            
+
+            
+           <div class="flex flex-wrap ">
+                <details id="aplp-2020" class="mb-6 border border-blue-200 rounded-md p-4 bg-white max-w-full">
+                    <summary class="cursor-pointer text-blue-600 font-semibold text-lg">
+                        2021
+                    </summary>
+ 
             <div class="bg-gray-50 rounded-lg shadow-lg p-8 max-w-xl">
                 <div class="relative overflow-hidden">
             <div class="carousel-container">
@@ -688,7 +2077,10 @@
                         </div>
                     </div>
                 </div>
+            </div> </details>
+
             </div>
+
         </section>
         <section class="mb-16" id="ing">
             <h2 class="text-2xl font-bold text-indigo-600 mb-4">ING - Promotions</h2>
